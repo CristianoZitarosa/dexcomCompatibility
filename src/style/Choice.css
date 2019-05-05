@@ -1,0 +1,28 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+.choice {
+  display: flex;
+  flex-flow: column;
+}
+
+.selectionContainer {
+  display: flex;
+  margin: auto;
+}
+
+.selectionText {
+  margin: auto;
+  width: 760px;
+}
+
+.appSelection {
+  /* border: 1px solid red; */
+  width: 150px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
