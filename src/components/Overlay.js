@@ -7,8 +7,8 @@ function Overlay() {
       <div id="landingMessage">
         <p>Please read carefully:</p>
         <p>This is NOT an official page mantained from Dexcom!</p>
-        <button type="button" name="getInformed" id="getInformed"> Get Informed </button>
-        <button type="button" name="agreeButton" id="agreeButton"> I Agree </button>
+        <button type="button" name="getInformed" id="getInformed"><i className="fas fa-info-circle pulse"></i> Get Informed </button>
+        <button type="button" name="agreeButton" id="agreeButton"><i className="fas fa-thumbs-up pulse"></i> I Agree </button>
       </div>
       <div className="emptyOverlay"></div>
     </div>

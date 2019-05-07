@@ -36,14 +36,27 @@
   border: none;
   padding: 15px 32px;
   color: white;
+  border-radius: 5px;
   font-size: 1.05em;
   cursor: pointer;
   transition:all 0.3s ease-out;
 }
 
+.pulse {
+  display: inline-block;
+  position: relative;
+  animation: pulse 1s infinite linear;
+}
+
+@keyframes pulse {
+  0% { transform:scale(0.9); }
+  50% { transform:scale(1.2); }
+  100% { transform:scale(0.9); }
+}
+
 #getInformed:hover,
 #agreeButton:hover {
-  transform:scale(1.1);
+  transform:scale(1.2);
 }
 
 #getInformed {
