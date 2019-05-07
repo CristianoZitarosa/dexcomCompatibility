@@ -1,9 +1,11 @@
 import React from 'react';
 import '../style/Choice.css';
+import Overlay from './Overlay.js';
 
 function Choice() {
   return (
     <div className="choice">
+      <Overlay />
       <p className="selectionText">
         Select an App:
       </p>

@@ -1,0 +1,31 @@
+.btn-group {
+  text-align: right;
+  padding: 45px;
+  width: 935px;
+  padding: 45px 45px 0 45px;
+  margin: auto;
+}
+
+.button {
+  background: #f79646;
+  border: none;
+  padding: 15px 32px;
+  color: white;
+  /* text-align: center;
+  text-decoration: none;
+  display: inline-block; */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #e38639;
+}
+
+.btn-left {
+  border-radius: 7px 0 0 0;
+}
+
+.btn-right {
+  border-radius: 0 7px 0 0;
+}
