@@ -5,10 +5,12 @@ class About extends Component {
 
   componentDidMount() {
     document.getElementById('selectionText').innerText='About this page:';
+    document.querySelector('.choice').classList.add("hide");
   }
 
   componentWillUnmount() {
     document.getElementById('selectionText').innerText='Select an App:';
+    document.querySelector('.choice').classList.remove("hide");
   }
 
   render() {

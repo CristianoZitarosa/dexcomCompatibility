@@ -5,6 +5,7 @@ import Overlay from './Overlay.js';
 import Choice from './Choice.js';
 import Nav from './Nav.js';
 import About from './About.js';
+import Clarity from './Clarity.js';
 
 class App extends Component {
 
@@ -20,7 +21,9 @@ class App extends Component {
         <p id="selectionText">
           Select an App:
         </p>
-        <Route exact path="/" component={ Choice } />
+        <Choice />
+        {/* <Route exact path="/" component={ Choice } /> */}
+        <Route path="/clarity" component={ Clarity } />
         <Route path="/about" component={ About } />
       </div>
     );

@@ -1,3 +1,8 @@
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
 .choice {
   display: flex;
   flex-flow: column;
@@ -9,6 +14,22 @@
   margin: auto;
   background: #f79646;
   border-radius: 0 0 7px 7px;
+}
+
+/**
+* This class is added to .selectionContainer to remove rounded
+*   borders when an app is selected.
+**/
+.fixBorder {
+  border-radius: 0;
+}
+
+/**
+* This class is added to .choice container to hide the app selection menu
+*   when the user selects the about page.
+**/
+.hide {
+  display: none;
 }
 
 .appSelection {

@@ -1,0 +1,58 @@
+ul {
+  list-style: none;
+}
+
+#container {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 938px;
+}
+
+.groupHead {
+  border: 1px solid #eeedeb;
+  background: #f79646;
+  color: #fff;
+  width: auto;
+  flex: 1 100%;
+}
+
+.countries {
+  padding: 0 3% 0 27%;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.left {
+  border-left: 1px solid #eeedeb;
+  background: #f79646;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 30%;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 0 0 0 7px;
+}
+
+.korea {
+  background: #9bbb59;
+}
+
+.right {
+  background: #fdefe9;
+  width: 70%;
+  flex: 3;
+  border-radius: 0 0 7px 0;
+}
+
+.koreaRight {
+  background: #eff3ea;
+}
+
+.insideText {
+  padding: 0 3% 0 3%;
+}
