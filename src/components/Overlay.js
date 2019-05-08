@@ -10,7 +10,7 @@ class Overlay extends Component {
         <div id="landingMessage">
           <p>Please read carefully:</p>
           <p>This is NOT an official page maintained by Dexcom!</p>
-          <Link to="/test">
+          <Link to="/about">
           <button type="button" name="getInformed" id="getInformed" onClick={ this.props.closeOverlay }>
             <i className="fas fa-info-circle pulse"></i> Get Informed
           </button>

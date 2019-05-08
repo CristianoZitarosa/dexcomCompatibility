@@ -4,6 +4,7 @@ import '../style/App.css';
 import Overlay from './Overlay.js';
 import Choice from './Choice.js';
 import Nav from './Nav.js';
+import About from './About.js';
 
 class App extends Component {
 
@@ -19,12 +20,8 @@ class App extends Component {
         <p className="selectionText">
           Select an App:
         </p>
-        <Route exact path="/" component={Choice} />
-        <Route path="/test" render={() => (
-            <div id="helpPage">
-              <p>TEST</p>
-            </div>)
-          } />
+        <Route exact path="/" component={ Choice } />
+        <Route path="/about" component={ About } />
       </div>
     );
   }

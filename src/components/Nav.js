@@ -12,7 +12,7 @@ class Nav extends Component {
             <i className="fas fa-home"></i> Home
           </button>
         </Link>
-        <Link to="/test">
+        <Link to="/about">
           <button className="button btn-right"><i className="fas fa-exclamation-circle"></i> About this page</button>
         </Link>
       </div>
