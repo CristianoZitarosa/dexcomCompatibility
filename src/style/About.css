@@ -5,3 +5,8 @@
   margin: auto;
   border-radius: 0 0 7px 7px;
 }
+
+#linkDex {
+  color: #00f;
+  text-decoration: underline;
+}
