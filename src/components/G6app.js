@@ -30,7 +30,7 @@ class G6app extends Component {
 
           <p className="insideText">
             <i className="fab fa-android"></i>
-            <strong>Android</strong>
+            <strong> Android</strong>
           </p>
           <ul>
             <li><i className="fas fa-mobile-alt"></i></li>
@@ -75,7 +75,7 @@ class G6app extends Component {
 
           <p className="insideText">
             <i className="fab fa-apple"></i>
-            <strong>Apple</strong>
+            <strong> Apple</strong>
           </p>
           <ul>
             <li><i className="fas fa-mobile-alt"></i></li>

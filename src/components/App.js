@@ -13,7 +13,7 @@ import G6app from './G6app.js';
 class App extends Component {
 
   closeOverlay = () => {
-    document.querySelector('.overlay').style.display = 'none';
+    document.querySelector('.overlay').classList.add('close');
   };
 
   render() {
