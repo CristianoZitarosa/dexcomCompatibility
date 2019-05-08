@@ -16,6 +16,9 @@ class App extends Component {
       <div>
         <Overlay closeOverlay={ this.closeOverlay }/>
         <Nav />
+        <p className="selectionText">
+          Select an App:
+        </p>
         <Route exact path="/" component={Choice} />
         <Route path="/test" render={() => (
             <div id="helpPage">

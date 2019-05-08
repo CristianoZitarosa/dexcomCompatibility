@@ -6,9 +6,6 @@ class Choice extends Component {
 
     return (
       <div className="choice">
-        <p className="selectionText">
-          Select an App:
-        </p>
         <div className="selectionContainer">
           <div className="appSelection">
             <img width="75" height="75" src="https://s3-us-west-2.amazonaws.com/dexcommisc/App+images/g6-app.png" alt="G6 App"/>

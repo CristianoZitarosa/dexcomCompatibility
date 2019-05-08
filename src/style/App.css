@@ -3,3 +3,12 @@
 body {
   background: #eeedeb;
 }
+
+.selectionText {
+  margin: auto;
+  color: #fff;
+  background: #f79646;
+  width: 896px;
+  padding: 20px;
+  margin-bottom: 2px;
+}
