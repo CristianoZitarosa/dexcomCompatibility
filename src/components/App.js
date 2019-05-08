@@ -17,7 +17,7 @@ class App extends Component {
       <div>
         <Overlay closeOverlay={ this.closeOverlay }/>
         <Nav />
-        <p className="selectionText">
+        <p id="selectionText">
           Select an App:
         </p>
         <Route exact path="/" component={ Choice } />

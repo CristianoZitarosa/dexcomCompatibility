@@ -2,6 +2,15 @@ import React, { Component }  from 'react';
 import '../style/About.css';
 
 class About extends Component {
+
+  componentDidMount() {
+    document.getElementById('selectionText').innerText='About this page:';
+  }
+
+  componentWillUnmount() {
+    document.getElementById('selectionText').innerText='Select an App:';
+  }
+
   render() {
 
     return (
