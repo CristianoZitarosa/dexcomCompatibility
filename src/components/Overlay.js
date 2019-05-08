@@ -1,30 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/Overlay.css';
 
-function Overlay() {
+class Overlay extends Component {
+  render() {
 
-  function closeOverlay() {
-    document.querySelector('.overlay').style.display = 'none';
-  }
-
-  return (
-    <div className="overlay">
-      <div id="landingMessage">
-        <p>Please read carefully:</p>
-        <p>This is NOT an official page mantained from Dexcom!</p>
-        <Link to="/test">
-          <button type="button" name="getInformed" id="getInformed">
+    return (
+      <div className="overlay">
+        <div id="landingMessage">
+          <p>Please read carefully:</p>
+          <p>This is NOT an official page maintained by Dexcom!</p>
+          <Link to="/test">
+          <button type="button" name="getInformed" id="getInformed" onClick={ this.props.closeOverlay }>
             <i className="fas fa-info-circle pulse"></i> Get Informed
           </button>
         </Link>
-        <button type="button" name="agreeButton" id="agreeButton" onClick={closeOverlay}>
+        <button type="button" name="agreeButton" id="agreeButton" onClick={ this.props.closeOverlay }>
           <i className="fas fa-thumbs-up pulse"></i> I Agree
         </button>
       </div>
       <div className="emptyOverlay"></div>
     </div>
-  );
+    );
+
+  }
 }
 
 export default Overlay;

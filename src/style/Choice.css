@@ -7,7 +7,6 @@
   display: flex;
   flex-flow: column;
   color: #fff;
-  /* pointer-events: none; */
 }
 
 .selectionContainer {
