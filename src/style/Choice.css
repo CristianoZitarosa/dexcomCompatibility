@@ -1,8 +1,3 @@
-* {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
-}
-
 .choice {
   display: flex;
   flex-flow: column;
