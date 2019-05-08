@@ -14,7 +14,7 @@ class Clarity extends Component {
   render() {
     return (
 
-      <div id="container">
+      <div className="container">
         <div className="groupHead">
           <p className="countries">
             Australia, Austria, Bahrain, Belgium, Czech Republic, Denmark, Finland, France, Germany, Hong Kong, Ireland, Israel, Italy, Jordan, Kuwait, Lebanon, Luxembourg, Netherlands, New Zealand, Norway, Oman, Poland, Qatar, Saudi Arabia, South Africa, South Korea, Spain, Sweden, Switzerland, UAE, United Kingdom

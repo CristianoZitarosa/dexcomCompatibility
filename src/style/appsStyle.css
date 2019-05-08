@@ -2,7 +2,7 @@ ul {
   list-style: none;
 }
 
-#container {
+.container {
   margin: auto;
   display: flex;
   flex-flow: row wrap;
@@ -55,4 +55,9 @@ ul {
 
 .insideText {
   padding: 0 3% 0 3%;
+}
+
+.partition {
+  height: 45px;
+  flex: 1 100%;
 }

@@ -6,6 +6,7 @@ import Choice from './Choice.js';
 import Nav from './Nav.js';
 import About from './About.js';
 import Clarity from './Clarity.js';
+import Follow from './Follow.js';
 
 class App extends Component {
 
@@ -24,6 +25,7 @@ class App extends Component {
         <Choice />
         {/* <Route exact path="/" component={ Choice } /> */}
         <Route path="/clarity" component={ Clarity } />
+        <Route path="/follow" component={ Follow } />
         <Route path="/about" component={ About } />
       </div>
     );
