@@ -125,7 +125,7 @@ class G5app extends Component {
 
         <div className="groupHead korea">
           <p className="countries">
-            South Korea - Android ONLY <i className="fab fa-android"></i>
+            South Korea - Android ONLY <i className="fab fa-android noBold"></i>
           </p>
         </div>
         <div className="left korea">

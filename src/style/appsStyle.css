@@ -42,6 +42,13 @@ ul {
   background: #9bbb59;
 }
 
+/**
+* to fix android icon on Korea titles
+**/
+.noBold {
+  font-weight: normal;
+}
+
 .right {
   background: #fdefe9;
   width: 70%;
