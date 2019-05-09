@@ -1,10 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import '../style/appsStyle.css';
-import Clarity from './Clarity.js';
-import Follow from './Follow.js';
-import G5app from './G5app.js';
-import G6app from './G6app.js';
+import Clarity from './Apps/Clarity.js';
+import Follow from './Apps/Follow.js';
+import G5app from './Apps/G5app.js';
+import G6app from './Apps/G6app.js';
 
 function AppComponent() {
 

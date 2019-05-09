@@ -1,5 +1,5 @@
 import React, { Component }  from 'react';
-import '../style/appsStyle.css';
+import '../../style/appsStyle.css';
 
 class Follow extends Component {
 
