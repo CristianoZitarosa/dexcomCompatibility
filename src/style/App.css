@@ -3,6 +3,13 @@
 body {
   background: #eeedeb;
   font-family: 'Source Sans Pro', sans-serif;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.scroll {
+  overflow-y: scroll;
 }
 
 #selectionText {
