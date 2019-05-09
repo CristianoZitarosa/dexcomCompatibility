@@ -177,6 +177,8 @@ class G5app extends Component {
           </ul>
         </div>
 
+        <div className="partition"></div>
+
       </div>
 
     );

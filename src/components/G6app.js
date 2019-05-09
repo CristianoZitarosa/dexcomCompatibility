@@ -112,6 +112,9 @@ class G6app extends Component {
             </li>
           </ul>
         </div>
+
+        <div className="partition"></div>
+
       </div>
 
     );

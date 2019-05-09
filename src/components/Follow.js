@@ -148,6 +148,9 @@ class Follow extends Component {
             </li>
           </ul>
         </div>
+
+        <div className="partition"></div>
+
       </div>
 
     );
