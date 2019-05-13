@@ -4,13 +4,20 @@ import '../style/About.css';
 class About extends Component {
 
   componentDidMount() {
-    document.getElementById('selectionText').innerText='About this page:';
-    document.querySelector('.choice').classList.add("hide");
+    this.switchMessage();
   }
 
   componentWillUnmount() {
-    document.getElementById('selectionText').innerText='Select an App:';
-    document.querySelector('.choice').classList.remove("hide");
+    this.switchMessage();
+  }
+
+  switchMessage = () => {
+    const homeMessage = document.querySelector('.homeMessage');
+    const aboutMessage = document.querySelector('.aboutMessage');
+    const choice = document.querySelector('.choice');
+    aboutMessage.classList.toggle("hide");
+    homeMessage.classList.toggle("hide");
+    choice.classList.toggle("hide");
   }
 
   render() {

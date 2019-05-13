@@ -12,7 +12,8 @@ body {
   overflow-y: scroll;
 }
 
-#selectionText {
+.homeMessage,
+.aboutMessage {
   margin: auto;
   color: #fff;
   background: #f79646;

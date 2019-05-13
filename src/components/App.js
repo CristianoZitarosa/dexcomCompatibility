@@ -19,8 +19,11 @@ class App extends Component {
       <div>
         <Overlay closeOverlay={ this.closeOverlay }/>
         <Nav />
-        <p id="selectionText">
+        <p className="homeMessage">
           Select an App:
+        </p>
+        <p className="aboutMessage hide">
+          About this page:
         </p>
         <Choice />
         <AppComponent />
