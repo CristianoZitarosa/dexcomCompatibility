@@ -16,7 +16,7 @@ class Overlay extends Component {
           </button>
         </Link>
         <button type="button" name="agreeButton" id="agreeButton" onClick={ this.props.closeOverlay }>
-          <i className="fas fa-thumbs-up pulse"></i> I Agree
+          <i className="fas fa-thumbs-up pulse"></i> Agree
         </button>
       </div>
       <div className="emptyOverlay"></div>
