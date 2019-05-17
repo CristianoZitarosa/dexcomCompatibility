@@ -1,13 +1,13 @@
 .btn-group {
-  text-align: right;
   padding: 45px;
-  width: 936px;
+  width: 890px;
   padding: 45px 45px 0 45px;
   margin: auto;
+  /* text-align: right; */
 }
 
 .button {
-  background: #f79646;
+  background: #6d4e44;
   border: none;
   padding: 15px 32px;
   color: white;
@@ -16,7 +16,7 @@
 }
 
 .button:hover {
-  background: #e38639;
+  background: #5b4038;
 }
 
 .btn-left {
