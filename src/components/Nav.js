@@ -13,7 +13,10 @@ class Nav extends Component {
           </button>
         </Link>
         <Link to="/about">
-          <button className="button btn-right"><i className="fas fa-info-circle"></i> About this page</button>
+          <button className="button"><i className="fas fa-info-circle"></i> About this page</button>
+        </Link>
+        <Link to="/lang">
+          <button className="button btn-right"><i className="fas fa-language"></i> Language</button>
         </Link>
       </div>
     );
