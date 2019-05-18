@@ -7,7 +7,7 @@
 }
 
 .button {
-  background: #6d4e44;
+  background: #4c4a49;
   border: none;
   padding: 15px 32px;
   color: white;
@@ -16,7 +16,7 @@
 }
 
 .button:hover {
-  background: #5b4038;
+  background: #615d5c;
 }
 
 .btn-left {
