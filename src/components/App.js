@@ -1,11 +1,10 @@
 import React, { Component }  from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import '../style/App.css';
 import Overlay from './Overlay.js';
-import Choice from './Choice.js';
 import Nav from './Nav.js';
+import Choice from './Choice.js';
 import About from './About.js';
-import AppComponent from './AppComponent.js';
 
 class App extends Component {
 
@@ -28,25 +27,25 @@ class App extends Component {
       console.log(`The localStorage "${localStorage.isNewUser}" is already set, no action is needed.`);
       this.closeOverlay();
     }
-
   };
 
   render() {
+
     return (
+
       <div>
-        <Overlay
-          closeOverlay={ this.closeOverlay }
-          setStorage={ this.setStorage }
-        />
+        <Overlay closeOverlay={ this.closeOverlay } setStorage={ this.setStorage } />
         <Nav />
         <p id="barMessage">
           <span className="homeMessage">Select an App:</span>
           <span className="aboutMessage hide">About this page:</span>
         </p>
-        <Choice />
-        <AppComponent />
-        <Route path="/about" component={ About } />
+        <Switch>
+          <Route path="/about" component={ About } />
+          <Route component={ Choice } />
+        </Switch>
       </div>
+
     );
   }
 }

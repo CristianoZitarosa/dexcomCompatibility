@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import '../style/Choice.css';
+import G6app from './Apps/G6app.js';
+import G5app from './Apps/G5app.js';
+import Clarity from './Apps/Clarity.js';
+import Follow from './Apps/Follow.js';
 
 class Choice extends Component {
   render() {
@@ -33,6 +37,12 @@ class Choice extends Component {
         </div>
       </Link>
         </div>
+
+        <Route path="/g6" component={ G6app } />
+        <Route path="/g5" component={ G5app } />
+        <Route path="/clarity" component={ Clarity } />
+        <Route path="/follow" component={ Follow } />
+
       </div>
     );
 

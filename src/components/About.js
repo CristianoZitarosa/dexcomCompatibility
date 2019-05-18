@@ -14,10 +14,8 @@ class About extends Component {
   switchMessage = () => {
     const homeMessage = document.querySelector('.homeMessage');
     const aboutMessage = document.querySelector('.aboutMessage');
-    const choice = document.querySelector('.choice');
     aboutMessage.classList.toggle("hide");
     homeMessage.classList.toggle("hide");
-    choice.classList.toggle("hide");
   }
 
   render() {
