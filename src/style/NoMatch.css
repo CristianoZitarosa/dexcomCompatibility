@@ -1,0 +1,16 @@
+#nomatch {
+  text-align: center;
+  padding-top: 150px;
+}
+
+#nomatchBtn {
+  cursor: pointer;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 5px;
+  transition:all 0.5s ease-out;
+}
+
+#nomatchBtn:hover {
+  transform:scale(1.2);
+}
