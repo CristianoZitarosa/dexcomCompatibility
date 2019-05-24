@@ -1,6 +1,6 @@
 .overlay {
   position: fixed;
-  display: block;
+  /* display: block; */
   padding: 45px;
   width: 100%;
   height: 100%;
@@ -9,10 +9,6 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.7);
-}
-
-.close {
-  display: none;
 }
 
 .emptyOverlay {
@@ -78,4 +74,19 @@
 
 #agreeButton:hover {
   background: #04c104;
+}
+
+#select {
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1em;
+}
+
+.langSwitch {
+  display: flex;
+}
+
+#flag {
+  margin-left: 25px;
+  border-radius: 10px;
 }

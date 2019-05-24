@@ -5,46 +5,59 @@ import Overlay from './Overlay.js';
 import Nav from './Nav.js';
 import Choice from './Choice.js';
 import About from './About.js';
+import NoMatch from './NoMatch.js';
+import { languages } from '../languages/languages';
 
 class App extends Component {
 
-  componentDidMount() {
-    this.checkStorage();
+// Se non già impostato diversamente, la lingua di base è inglese
+  state = { id: 0 }
+
+/**
+* Funzione chiamata dall'overlay. Quando cambia l'elemento del menu lingua
+* il value del target selezionato è passato come stato e viene memorizzato nello
+* storage per futuro utilizzo
+**/
+  selectLang = (e) => {
+    this.setState({ id: e.target.value })
+    localStorage.setItem("language", e.target.value);
+    console.log(this.state);
   }
 
-  closeOverlay = () => {
-    document.querySelector('.overlay').classList.add('close');
-    document.body.classList.add("scroll");
-  };
-
-  setStorage = () => {
-    localStorage.setItem("isNewUser", false);
-    console.log(`There was no localStorage before, I have set "${localStorage.isNewUser}" right now.` );
-  };
-
-  checkStorage = () => {
-    if (localStorage.isNewUser !== undefined) {
-      console.log(`The localStorage "${localStorage.isNewUser}" is already set, no action is needed.`);
-      this.closeOverlay();
-    }
-  };
+/**
+* Funzione chiamata dall'overlay. Se c'è stata una visita aggiorno lo stato dell'app
+* con la lingua nello storage e aggiorno il value del menu di scelta che altrimenti
+* rimarrebbe invariato.
+**/
+  setLang = () => {
+    this.setState({ id: localStorage.language });
+    document.querySelector('#select').value = localStorage.language;
+  }
 
   render() {
 
+    let currentLang = languages[this.state.id];
+    const{ select, about } = currentLang;
+
     return (
 
-      <div>
-        <Overlay closeOverlay={ this.closeOverlay } setStorage={ this.setStorage } />
-        <Nav />
-        <p id="barMessage">
-          <span className="homeMessage">Select an App:</span>
-          <span className="aboutMessage hide">About this page:</span>
-        </p>
-        <Switch>
-          <Route path="/about" component={ About } />
-          <Route component={ Choice } />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path={['/','/g6', '/g5', '/clarity', '/follow', '/about']} render={()=>
+          <div>
+            <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }/>
+            <Nav />
+            <p id="barMessage">
+              <span className="homeMessage">{ select }</span>
+              <span className="aboutMessage hide">{ about }</span>
+            </p>
+            <Switch>
+              <Route path="/about" component={ About } />
+              <Route component={ Choice } />
+            </Switch>
+          </div>
+        }/>
+        <Route component={ NoMatch } />
+      </Switch>
 
     );
   }

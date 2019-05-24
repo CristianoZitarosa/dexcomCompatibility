@@ -21,3 +21,13 @@ body {
   margin-bottom: 1px;
   border-radius: 7px 7px 0 0;
 }
+
+/**
+* This class is added to
+* .choice container when about is selected
+*  to hide the overlay
+* to elements of barMessage according to home or about path
+**/
+.hide {
+  display: none;
+}

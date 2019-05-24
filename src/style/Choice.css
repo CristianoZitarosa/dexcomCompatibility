@@ -25,14 +25,6 @@ a:visited {
   border-radius: 0;
 }
 
-/**
-* This class is added to .choice container to hide the app selection menu
-*   when the user selects the about page.
-**/
-.hide {
-  display: none;
-}
-
 .appSelection {
   width: 194px;
   padding: 20px;
