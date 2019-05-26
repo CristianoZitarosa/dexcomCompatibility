@@ -35,6 +35,20 @@ class App extends Component {
     document.querySelector('#select').value = localStorage.language;
   }
 
+/**
+* Con un for, ciclo fino alla lunghezza dell'array lingue assegnando ad element
+*   i valori Html che saranno aggiunti con push() all'array,
+*   aggiornati con gli indici usati da react per creare gli elementi.
+*
+* Il callBack lo applico solo da Nav.js
+**/
+  fillLanguages = (array, element, callBack) => {
+    for (let i=0; i < languages.length; i++) {
+      element = <option key={ i } value={ i } onClick={ callBack }>{ languages[i].lang }</option>;
+      array.push(element);
+    }
+  }
+
   render() {
 
     const currentLang = languages[this.state.id];
@@ -48,7 +62,7 @@ class App extends Component {
           <div>
 
             {/* Componente Overlay */}
-            <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }/>
+            <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }  fillLanguages={this.fillLanguages}/>
 
             {/* Componente Nav ovvero i bottoni */}
             <Nav id={ this.state.id } selectLang={ this.selectLang } fillLanguages={this.fillLanguages}/>

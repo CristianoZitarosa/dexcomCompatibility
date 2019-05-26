@@ -13,6 +13,20 @@ class Nav extends Component {
     const currentLang = languages[this.props.id];
     const { aboutBtn } = currentLang;
 
+    /**
+    * Processo usato per ciclizzare la creazione delle lingue
+    *   nel tasto Languages.
+    * Creo un "array" ed un "el" vuoti
+    * Li passo alla funzione fillLanguages(dettagli scritti lì).
+    * Ora ho un array che produrrà tanti elementi quante lingue presenti.
+    *
+    * Qui applico il callback sul click, differenzio l'array per sicurezza
+    *   ma ha funzionato anche con gli stessi nomi.
+    **/
+    const langList = [];
+    let langElem= '';
+    this.props.fillLanguages(langList, langElem, selectLang);
+
     return (
       <div className="btn-group">
 
@@ -29,11 +43,11 @@ class Nav extends Component {
         {/* bottone lingua */}
         <button className="button btn-right" ><i className="fas fa-language"></i> Language
           <div className="test">
-            {/* Devono essere tag <option> per usare attributo <value>
+            {/* NOTA del perchè uso tag <option>!!!
+            Devono essere tag <option> per usare attributo <value>
             su altri tag non funzionerebbe restituendo undefined
             nello storage  facendo crashare l'applicazione*/}
-            <option onClick={ setLan } value='0'>English</option>
-            <option onClick={ setLan } value='1'>Italiano</option>
+            { langList }
           </div>
         </button>
 

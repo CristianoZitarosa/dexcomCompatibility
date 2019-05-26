@@ -86,18 +86,6 @@ class Overlay extends Component {
     this.setStorage();
   }
 
-/**
-* Con un for, ciclo fino alla lunghezza dell'array lingue assegnando ad element
-*   i valori Html che saranno aggiunti con push() all'array,
-*   aggiornati con gli indici usati da react per creare gli elementi.
-**/
-  fillLanguages = (array,element) => {
-    for (let i=0; i < languages.length; i++) {
-      element = <option key={ i } value={ i }>{ languages[i].lang }</option>;
-      array.push(element);
-    }
-  }
-
   render() {
     /**
     * Processo usato per ciclizzare la creazione delle lingue nel menu select.
@@ -107,7 +95,7 @@ class Overlay extends Component {
     **/
     const options = [];
     let el= '';
-    this.fillLanguages(options,el);
+    this.props.fillLanguages(options, el);
 
     /**
     * Semplificazioni codice
