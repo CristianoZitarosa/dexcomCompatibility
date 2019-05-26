@@ -38,25 +38,38 @@ class App extends Component {
   render() {
 
     const currentLang = languages[this.state.id];
-    const{ select, aboutBar } = currentLang;
+    const { select, aboutBar } = currentLang;
 
     return (
 
       <Switch>
+        {/* Switch principale che restituisce sempre il component NoMatch, a meno che non venga linkata esattamente una delle pagine seguenti, quindi tutte quelle esistenti nell'app */}
         <Route exact path={['/','/g6', '/g5', '/clarity', '/follow', '/about']} render={()=>
           <div>
+
+            {/* Componente Overlay */}
             <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }/>
+
+            {/* Componente Nav ovvero i bottoni */}
             <Nav id={ this.state.id } setLan={ this.selectLang }/>
+
+            {/* barra dei messaggi */}
             <p id="barMessage">
               <span className="homeMessage">{ select }</span>
               <span className="aboutMessage hide">{ aboutBar }</span>
             </p>
+
+            {/* Switch secondario, restituisce sempre Choice a meno che non sia linkato About, lo uso per far sparire Choice senza usare funzioni */}
             <Switch>
+              {/* Componente About */}
               <Route path="/about" component={ About } />
+              {/* Componente Choice, sempre visibile, tranne in About */}
               <Route component={ Choice } />
             </Switch>
+
           </div>
         }/>
+        {/* Componente NoMatch, visibile se linkata una pagina inesistente */}
         <Route component={ NoMatch } />
       </Switch>
 

@@ -27,7 +27,7 @@ class Nav extends Component {
         {/* bottone lingua */}
         <button className="button btn-right" ><i className="fas fa-language"></i> Language
           <div className="test">
-          {/* Devono essere tag <option> per usare attributo <value>
+            {/* Devono essere tag <option> per usare attributo <value>
             su altri tag non funzionerebbe restituendo undefined
             nello storage  facendo crashare l'applicazione*/}
             <option onClick={ setLan } value='0'>English</option>
