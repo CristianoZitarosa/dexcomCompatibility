@@ -37,7 +37,7 @@ class Nav extends Component {
         </Link>
 
         <Link to="/about">{/* bottone about */}
-          <button className="button"><i className="fas fa-info-circle"></i> { aboutBtn }</button>
+          <button className="button infoButton"><i className="fas fa-info-circle"></i> { aboutBtn }</button>
         </Link>
 
         {/* bottone lingua */}
