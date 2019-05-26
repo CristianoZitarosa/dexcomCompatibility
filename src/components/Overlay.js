@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/Overlay.css';
-import { languages } from '../languages/languages';
+import languages from '../languages/languages.json';
 
 class Overlay extends Component {
 
@@ -12,6 +12,7 @@ class Overlay extends Component {
   componentDidMount() {
     this.checkStorage();
     this.checkLang();
+
   }
 
 /**
@@ -106,7 +107,7 @@ class Overlay extends Component {
             <img id='flag' width="35" height="35" src={ languages[this.props.id].flag } alt="flag"/>
           </div>
           <p>{ languages[this.props.id].txtFrstLn }</p>
-          <p>{ languages[this.props.id].txtScdtLn }</p>
+          <p>{ languages[this.props.id].txtScdLn }</p>
           <Link to="/about">
           <button type="button" name="getInformed" id="getInformed" onClick={ this.setValues }>
             <i className="fas fa-info-circle pulse"></i>{ languages[this.props.id].getInfo }

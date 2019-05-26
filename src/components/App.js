@@ -6,7 +6,7 @@ import Nav from './Nav.js';
 import Choice from './Choice.js';
 import About from './About.js';
 import NoMatch from './NoMatch.js';
-import { languages } from '../languages/languages';
+import languages from '../languages/languages.json';
 
 class App extends Component {
 

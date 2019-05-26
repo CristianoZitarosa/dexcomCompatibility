@@ -1,0 +1,29 @@
+[
+  {
+    "lang": "English",
+    "flag": "https://image.flaticon.com/icons/svg/555/555417.svg",
+
+    "txtFrstLn": "Please read carefully:",
+    "txtScdLn": "This is NOT an official page maintained by Dexcom!",
+    "getInfo": " Get Informed",
+    "agree": " Agree",
+
+    "select": "Select an App:",
+    "aboutBtn": "About this page",
+    "aboutBar": "Everything you need to know about this page:"
+  },
+
+  {
+    "lang": "Italiano",
+    "flag": "https://image.flaticon.com/icons/svg/555/555668.svg",
+
+    "txtFrstLn": "Per favore leggi attentamente:",
+    "txtScdLn": "Questa NON è una pagina ufficiale gestita da Dexcom!",
+    "getInfo": " Informati",
+    "agree": " Accetta",
+
+    "select": "Scegli un'app:",
+    "aboutBtn": "Informazioni utili",
+    "aboutBar": "Tutto ciò che c'è da sapere su questa pagina:"
+  }
+]
