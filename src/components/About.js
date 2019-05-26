@@ -11,6 +11,10 @@ class About extends Component {
     this.switchMessage();
   }
 
+/**
+* Appena il comp è montato, con questa funzione cambia il messaggio nella barra
+* indicando di scegliere un'app se in home, o informazioni se about
+**/
   switchMessage = () => {
     const homeMessage = document.querySelector('.homeMessage');
     const aboutMessage = document.querySelector('.aboutMessage');
