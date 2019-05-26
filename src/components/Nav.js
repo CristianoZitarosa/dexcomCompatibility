@@ -6,7 +6,9 @@ import languages from '../languages/languages.json';
 class Nav extends Component {
 
   render() {
-
+    /**
+    * Semplificazioni codice
+    **/
     const setLan = this.props.setLan;
     const currentLang = languages[this.props.id];
     const { aboutBtn } = currentLang;

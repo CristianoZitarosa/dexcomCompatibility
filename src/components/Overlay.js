@@ -86,36 +86,54 @@ class Overlay extends Component {
     this.setStorage();
   }
 
-  render() {
-    const array = [];
-    let el= '';
+/**
+* Con un for, ciclo fino alla lunghezza dell'array lingue assegnando ad element
+*   i valori Html che saranno aggiunti con push() all'array,
+*   aggiornati con gli indici usati da react per creare gli elementi.
+**/
+  fillLanguages = (array,element) => {
     for (let i=0; i < languages.length; i++) {
-      el = <option key={ i } value={ i }>{ languages[i].lang }</option>;
-      array.push(el);
+      element = <option key={ i } value={ i }>{ languages[i].lang }</option>;
+      array.push(element);
     }
+  }
 
-    const iteration = array.map( (el) => (el) );
+  render() {
+    /**
+    * Processo usato per ciclizzare la creazione delle lingue nel menu select.
+    * Creo un "array" ed un "el" vuoti
+    * Li passo alla funzione fillLanguages(dettagli scritti lì).
+    * Ora ho un array che produrrà tanti elementi quante lingue presenti.
+    **/
+    const options = [];
+    let el= '';
+    this.fillLanguages(options,el);
 
+    /**
+    * Semplificazioni codice
+    **/
     const selectLang = this.props.selectLang;
     const setValues = this.setValues;
     const currentLang = languages[this.props.id];
     const { flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
 
     return (
-      <div className="overlay">
-        <div id="landingMessage">
-          <div className="langSwitch">
+      <div className="overlay"> {/* Overlay primario */}
+        <div id="landingMessage"> {/* Testo e immagini dell'overlay */}
+          <div className="langSwitch"> {/* Select lingua e bandiara */}
 
+            {/* Selezione della lingua */}
             <select id='select' onChange={ selectLang }> {/* menu selezione lingue */}
-              { iteration }
+              { options }
             </select>
 
+            {/* Bandiera */}
             <img id='flag' width="35" height="35" src={ flag } alt="flag"/> {/* bandiera */}
 
           </div>
 
-          <p>{ txtFrstLn }</p> {/* messaggi overlay */}
-          <p>{ txtScdLn }</p>
+          <p>{ txtFrstLn }</p> {/* messaggio overlay, riga 1 */}
+          <p>{ txtScdLn }</p> {/* messaggio overlay, riga 2 */}
 
         <Link to="/about"> {/* bottone informazioni */}
           <button type="button" name="getInformed" id="getInformed" onClick={ setValues }>
@@ -129,7 +147,7 @@ class Overlay extends Component {
 
       </div>
 
-      <div className="emptyOverlay"></div>
+      <div className="emptyOverlay"></div> {/* Overlay secondario, per bloccare/sfumare contenuto pagina sottostante prima di aver letto info o accettato di continuare*/}
     </div>
     );
 
