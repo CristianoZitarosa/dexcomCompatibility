@@ -53,11 +53,13 @@
 
 .test option {
   padding: 16px;
+  transition:all 0.4s ease-out;
 }
 
 .test option:hover {
   padding: 16px;
-  background: #615d5c;
+  background: #fff;
+  color: #4c4a49;
 }
 
 .test option:last-of-type:hover {
