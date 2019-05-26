@@ -12,7 +12,6 @@ class Overlay extends Component {
   componentDidMount() {
     this.checkStorage();
     this.checkLang();
-
   }
 
 /**
@@ -97,26 +96,39 @@ class Overlay extends Component {
 
     const iteration = array.map( (el) => (el) );
 
+    const selectLang = this.props.selectLang;
+    const setValues = this.setValues;
+    const currentLang = languages[this.props.id];
+    const { flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
+
     return (
       <div className="overlay">
         <div id="landingMessage">
           <div className="langSwitch">
-            <select id='select' onChange={ this.props.selectLang }>
+
+            <select id='select' onChange={ selectLang }> {/* menu selezione lingue */}
               { iteration }
             </select>
-            <img id='flag' width="35" height="35" src={ languages[this.props.id].flag } alt="flag"/>
+
+            <img id='flag' width="35" height="35" src={ flag } alt="flag"/> {/* bandiera */}
+
           </div>
-          <p>{ languages[this.props.id].txtFrstLn }</p>
-          <p>{ languages[this.props.id].txtScdLn }</p>
-          <Link to="/about">
-          <button type="button" name="getInformed" id="getInformed" onClick={ this.setValues }>
-            <i className="fas fa-info-circle pulse"></i>{ languages[this.props.id].getInfo }
+
+          <p>{ txtFrstLn }</p> {/* messaggi overlay */}
+          <p>{ txtScdLn }</p>
+
+        <Link to="/about"> {/* bottone informazioni */}
+          <button type="button" name="getInformed" id="getInformed" onClick={ setValues }>
+            <i className="fas fa-info-circle pulse"></i>{ getInfo }
           </button>
         </Link>
-        <button type="button" name="agreeButton" id="agreeButton" onClick={ this.setValues }>
-          <i className="fas fa-thumbs-up pulse"></i>{ languages[this.props.id].agree }
+
+        <button type="button" name="agreeButton" id="agreeButton" onClick={ setValues }> {/* bottone accetta */}
+          <i className="fas fa-thumbs-up pulse"></i>{ agree }
         </button>
+
       </div>
+
       <div className="emptyOverlay"></div>
     </div>
     );

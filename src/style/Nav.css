@@ -25,3 +25,39 @@
 .btn-right {
   border-radius: 0 7px 0 0;
 }
+
+.btn-right:hover > .test {
+  display: block;
+}
+
+.test {
+  display: none;
+  background: #4c4a49;
+  position: absolute;
+  z-index: 1;
+  width: 159px;
+  margin-top: 15px;
+  margin-left: -32px;
+  border-radius: 0 0 7px 7px;
+}
+
+.test option {
+  padding: 16px;
+}
+
+.test option:hover {
+  padding: 16px;
+  background: #615d5c;
+}
+
+.test option:last-of-type:hover {
+  border-radius: 0 0 7px 7px;
+}
+
+.test:hover {
+  display: block;
+}
+
+.show {
+  display: block;
+}

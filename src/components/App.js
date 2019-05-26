@@ -19,9 +19,10 @@ class App extends Component {
 * storage per futuro utilizzo
 **/
   selectLang = (e) => {
+    console.log(`detected click on id "${e.target.value}"`);
     this.setState({ id: e.target.value })
     localStorage.setItem("language", e.target.value);
-    console.log(this.state);
+    console.log(`new app state is set on "${e.target.value}"`);
   }
 
 /**
@@ -36,8 +37,8 @@ class App extends Component {
 
   render() {
 
-    let currentLang = languages[this.state.id];
-    const{ select, about } = currentLang;
+    const currentLang = languages[this.state.id];
+    const{ select, aboutBar } = currentLang;
 
     return (
 
@@ -45,10 +46,10 @@ class App extends Component {
         <Route exact path={['/','/g6', '/g5', '/clarity', '/follow', '/about']} render={()=>
           <div>
             <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }/>
-            <Nav />
+            <Nav id={ this.state.id } setLan={ this.selectLang }/>
             <p id="barMessage">
               <span className="homeMessage">{ select }</span>
-              <span className="aboutMessage hide">{ about }</span>
+              <span className="aboutMessage hide">{ aboutBar }</span>
             </p>
             <Switch>
               <Route path="/about" component={ About } />
