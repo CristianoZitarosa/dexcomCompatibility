@@ -51,7 +51,7 @@ class App extends Component {
             <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }/>
 
             {/* Componente Nav ovvero i bottoni */}
-            <Nav id={ this.state.id } setLan={ this.selectLang }/>
+            <Nav id={ this.state.id } selectLang={ this.selectLang } fillLanguages={this.fillLanguages}/>
 
             {/* barra dei messaggi */}
             <p id="barMessage">

@@ -9,7 +9,7 @@ class Nav extends Component {
     /**
     * Semplificazioni codice
     **/
-    const setLan = this.props.setLan;
+    const selectLang = this.props.selectLang;
     const currentLang = languages[this.props.id];
     const { aboutBtn } = currentLang;
 
