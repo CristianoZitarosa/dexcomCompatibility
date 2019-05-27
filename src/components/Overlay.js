@@ -94,7 +94,7 @@ class Overlay extends Component {
     * Ora ho un array che produrrà tanti elementi quante lingue presenti.
     **/
     const options = [];
-    let el= '';
+    let el = '';
     this.props.fillLanguages(options, el);
 
     /**

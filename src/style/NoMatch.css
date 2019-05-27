@@ -1,13 +1,13 @@
 #nomatch {
-  text-align: center;
   padding-top: 150px;
+  text-align: center;
 }
 
 #nomatchBtn {
-  cursor: pointer;
-  padding: 15px 32px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  padding: 15px 32px;
   transition:all 0.5s ease-out;
 }
 

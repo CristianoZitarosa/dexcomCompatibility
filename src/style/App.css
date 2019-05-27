@@ -13,13 +13,13 @@ body {
 }
 
 #barMessage {
-  margin: auto;
-  color: #fff;
   background: #f79646;
-  width: 896px;
-  padding: 20px;
-  margin-bottom: 1px;
   border-radius: 7px 7px 0 0;
+  color: #fff;
+  margin: auto;
+  margin-bottom: 1px;
+  padding: 20px;
+  width: 896px;
 }
 
 /**

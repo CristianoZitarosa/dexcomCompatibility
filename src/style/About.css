@@ -1,10 +1,10 @@
 #aboutMessage {
+  background: #fdefe9;
+  border-radius: 0 0 7px 7px;
+  font-size: 1.2em;
+  margin: auto;
   padding: 45px;
   width: 846px;
-  font-size: 1.2em;
-  background: #fdefe9;
-  margin: auto;
-  border-radius: 0 0 7px 7px;
 }
 
 #linkDex {

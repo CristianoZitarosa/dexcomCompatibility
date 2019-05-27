@@ -3,40 +3,40 @@ ul {
 }
 
 .container {
-  margin: auto;
   display: flex;
   flex-flow: row wrap;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
+  margin: auto;
   width: 938px;
 }
 
 .groupHead {
-  border: 1px solid #eeedeb;
   background: #f79646;
+  border: 1px solid #eeedeb;
   color: #fff;
-  width: auto;
   flex: 1 100%;
+  width: auto;
 }
 
 .countries {
-  padding: 0 3% 0 27%;
-  font-weight: bold;
   font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 3% 0 27%;
 }
 
 .left {
-  border-left: 1px solid #eeedeb;
-  background: #f79646;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2em;
-  width: 30%;
-  flex: 1;
-  display: flex;
-  flex-flow: column;
   align-items: center;
+  background: #f79646;
+  border-left: 1px solid #eeedeb;
   border-radius: 0 0 0 7px;
+  color: #fff;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 30%;
 }
 
 .korea {
@@ -52,10 +52,10 @@ ul {
 
 .right {
   background: #fdefe9;
-  color: #000;
-  width: 70%;
-  flex: 3;
   border-radius: 0 0 7px 0;
+  color: #000;
+  flex: 3;
+  width: 70%;
 }
 
 .koreaRight {
@@ -67,6 +67,6 @@ ul {
 }
 
 .partition {
-  height: 45px;
   flex: 1 100%;
+  height: 45px;
 }

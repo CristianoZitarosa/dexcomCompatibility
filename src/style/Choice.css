@@ -1,20 +1,20 @@
 a:link,
 a:visited {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
 
 .choice {
+  color: #fff;
   display: flex;
   flex-flow: column;
-  color: #fff;
 }
 
 .selectionContainer {
-  display: flex;
-  margin: auto;
   background: #f79646;
   border-radius: 0 0 7px 7px;
+  display: flex;
+  margin: auto;
 }
 
 /**
@@ -26,17 +26,17 @@ a:visited {
 }
 
 .appSelection {
-  width: 194px;
-  padding: 20px;
+  align-items: center;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  padding: 20px;
   transition:all 0.3s ease-out;
+  width: 194px;
 }
 
 .appSelection:hover {
   background: #e38639;
-  cursor: pointer;
   border-radius: 7px;
+  cursor: pointer;
   transform:scale(1.1);
 }

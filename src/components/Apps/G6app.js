@@ -4,11 +4,11 @@ import '../../style/appsStyle.css';
 class G6app extends Component {
 
   componentDidMount() {
-    document.querySelector('.selectionContainer').classList.add("fixBorder");
+    document.querySelector('.selectionContainer').classList.add('fixBorder');
   }
 
   componentWillUnmount() {
-    document.querySelector('.selectionContainer').classList.remove("fixBorder");
+    document.querySelector('.selectionContainer').classList.remove('fixBorder');
   }
 
   render() {

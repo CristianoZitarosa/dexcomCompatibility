@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/Nav.css';
 import languages from '../languages/languages.json';
@@ -24,7 +24,7 @@ class Nav extends Component {
     *   ma ha funzionato anche con gli stessi nomi.
     **/
     const langList = [];
-    let langElem= '';
+    let langElem = '';
     this.props.fillLanguages(langList, langElem, selectLang);
 
     return (
