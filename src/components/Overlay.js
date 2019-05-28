@@ -46,7 +46,7 @@ class Overlay extends Component {
 **/
   closeOverlay = () => {
 // nota: rimuovo il check di esistenza per l'overlay. xchè lo avevo settato?
-    document.querySelector('.overlay').classList.add('hide');
+    document.querySelector('.emptyOverlay').classList.add('hide');
     document.body.classList.add("scroll");
     // if (document.querySelector('.overlay') !== null) {
     //   document.querySelector('.overlay').classList.add('close');
@@ -106,6 +106,8 @@ class Overlay extends Component {
     const { flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
 
     return (
+      <div className="emptyOverlay"> {/* Overlay secondario, per bloccare/sfumare contenuto pagina sottostante prima di aver letto info o accettato di continuare*/}
+
       <div className="overlay"> {/* Overlay primario */}
         <div id="landingMessage"> {/* Testo e immagini dell'overlay */}
           <div className="langSwitch"> {/* Select lingua e bandiara */}
@@ -134,9 +136,9 @@ class Overlay extends Component {
         </button>
 
       </div>
-
-      <div className="emptyOverlay"></div> {/* Overlay secondario, per bloccare/sfumare contenuto pagina sottostante prima di aver letto info o accettato di continuare*/}
     </div>
+  </div>
+
     );
 
   }
