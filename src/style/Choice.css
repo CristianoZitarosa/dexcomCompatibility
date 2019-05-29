@@ -1,5 +1,5 @@
-a:link,
-a:visited {
+.selectionContainer a:link,
+.selectionContainer a:visited {
   color: #fff;
   text-decoration: none;
 }
