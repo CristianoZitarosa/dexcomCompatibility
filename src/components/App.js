@@ -20,9 +20,11 @@ class App extends Component {
 **/
   selectLang = (e) => {
     console.log(`detected click on id "${e.target.value}"`);
-    this.setState({ id: e.target.value })
+    this.setState({ id: e.target.value });
     localStorage.setItem("language", e.target.value);
+    this.fillAboutPage(e.target.value);
     console.log(`new app state is set on "${e.target.value}"`);
+    console.log(`il nuovo stato è quindi "${this.state.id}"`);
   }
 
 /**
@@ -49,6 +51,30 @@ class App extends Component {
     }
   }
 
+/**
+* Viene chiamata direttamente da <About> quando si monta il componente ma
+*   anche chiamata da <Nav> o <Overlay> quando si seleziona una lingua, inserita
+*   nello stack di selectLang() in questa pagina.
+* La sua funzione è controllare l'esistenza di #aboutmessage, dato che se
+*   chiamata senza che <About> sia montato manderebbe in crash l'app.
+**/
+  fillAboutPage = (e) => {
+    if ( this.existsElem(document.getElementById('aboutMessage')) ) {
+      document.getElementById('aboutMessage').innerHTML = languages[e].test;
+    }
+  }
+
+/**
+* Verifico che un elemento non sia undefined o null riutilizzando questa funzione.
+* Deve essere contemporaneamente not undefined e not null,
+* dato che non posso prevedere l'elemento quale condizione verificherà
+**/
+  existsElem = (el) => {
+    if (el !== undefined && el !== null) {
+      return true;
+    }
+  }
+
   render() {
 
     const currentLang = languages[this.state.id];
@@ -62,7 +88,7 @@ class App extends Component {
           <div>
 
             {/* Componente Overlay */}
-            <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }  fillLanguages={this.fillLanguages}/>
+            <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }  fillLanguages={this.fillLanguages} existsElem={ this.existsElem }/>
 
             {/* Componente Nav ovvero i bottoni */}
             <Nav id={ this.state.id } selectLang={ this.selectLang } fillLanguages={this.fillLanguages}/>
@@ -76,7 +102,8 @@ class App extends Component {
             {/* Switch secondario, restituisce sempre Choice a meno che non sia linkato About, lo uso per far sparire Choice senza usare funzioni */}
             <Switch>
               {/* Componente About */}
-              <Route path="/about" component={ About } />
+              {/* <Route path="/about" component={ About } /> */}
+              <Route path="/about" render={()=> <About id={ this.state.id } fillAboutPage={ this.fillAboutPage } existsElem={ this.existsElem }/>}/>
               {/* Componente Choice, sempre visibile, tranne in About */}
               <Route component={ Choice } />
             </Switch>

@@ -19,18 +19,18 @@ class Overlay extends Component {
 * Deve essere contemporaneamente not undefined e not null,
 * dato che non posso prevedere l'elemento quale condizione verificherà
 **/
-  existsElem = (el) => {
-    if (el !== undefined && el !== null) {
-      return true;
-    }
-  }
+  // existsElem = (el) => {
+  //   if (el !== undefined && el !== null) {
+  //     return true;
+  //   }
+  // }
 
 /**
 * Se è stata impostata una lingua, cambia lo stato dell'app su quella lingua
 * Attiva la funzione situata in App.js
 **/
   checkLang = () => {
-    if ( this.existsElem(localStorage.language) ) {
+    if ( this.props.existsElem(localStorage.language) ) {
       this.props.setLang();
     }
     // if (localStorage.language !== undefined) {
@@ -67,7 +67,7 @@ class Overlay extends Component {
 * Controlla se l'utente ha già visitato. Se lo ha fatto chiude l'overlay
 **/
   checkStorage = () => {
-    if ( this.existsElem(localStorage.isNewUser) ) {
+    if ( this.props.existsElem(localStorage.isNewUser) ) {
       console.log(`The localStorage "${localStorage.isNewUser}" is already set, no action is needed.`);
       this.closeOverlay();
     }

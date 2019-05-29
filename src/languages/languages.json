@@ -10,7 +10,8 @@
 
     "select": "Select an App:",
     "aboutBtn": "About this page",
-    "aboutBar": "Everything you need to know about this page:"
+    "aboutBar": "Everything you need to know about this page:",
+    "test": "<p><strong>This is an Unofficial page!<\/strong><\/p><p>Dexcom is the owner of the brand, images of the Apps, style of the page, and the administrator of <strong>the original page<\/strong> you can reach <a href=\"https:\/\/www.dexcom.com\/dexcom-international-compatibility\" target=\"_blank\" rel=\"noopener noreferrer\"><strong id=\"linkDex\">by this link<\/strong><\/a>.<\/p><p>The style of this page is as much possible similar to the original page only to avoid that users can feel lost due a different graphic element.<\/p><p>This page is made from a Dexcom User to help Dexcom users.<\/p><p>The purpose is to provide an easier consultation of supported devices by original Dexcom Apps since the original page could currently be difficult to read to some users.<\/p><p>Due the fact this page is not mantained by Dexcom <strong>it is not possible to guarantee rapid updates or accuracy on provided data<\/strong>.<\/p><p>So enjoy this page as a visual improvement but <strong>please<\/strong> for any doubt or question <strong>refer to Dexcom<\/strong>.<\/p>"
   },
 
   {
@@ -24,6 +25,7 @@
 
     "select": "Scegli un'app:",
     "aboutBtn": "Informazioni utili",
-    "aboutBar": "Tutto ciò che c'è da sapere su questa pagina:"
+    "aboutBar": "Tutto ciò che c'è da sapere su questa pagina:",
+    "test": "<p><strong>Questa non è una pagina ufficiale!<\/strong><\/p><p>Dexcom è proprietaria del marchio, immagini delle App, stile della pagina e amministratore della <strong>pagina originale<\/strong> che trovi <a href=\"https:\/\/www.dexcom.com\/dexcom-international-compatibility\" target=\"_blank\" rel=\"noopener noreferrer\"><strong id=\"linkDex\">a questo link<\/strong><\/a>.<\/p><p>The style of this page is as much possible similar to the original page only to avoid that users can feel lost due a different graphic element.<\/p><p>This page is made from a Dexcom User to help Dexcom users.<\/p><p>The purpose is to provide an easier consultation of supported devices by original Dexcom Apps since the original page could currently be difficult to read to some users.<\/p><p>Due the fact this page is not mantained by Dexcom <strong>it is not possible to guarantee rapid updates or accuracy on provided data<\/strong>.<\/p><p>So enjoy this page as a visual improvement but <strong>please<\/strong> for any doubt or question <strong>refer to Dexcom<\/strong>.<\/p>"
   }
 ]
