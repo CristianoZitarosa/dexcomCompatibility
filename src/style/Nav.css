@@ -36,11 +36,11 @@
   border-radius: 0 7px 0 0;
 }
 
-.btn-right:hover > .test {
+.btn-right:hover > .list {
   display: block;
 }
 
-.test {
+.list {
   background: #4c4a49;
   border-radius: 0 0 7px 7px;
   display: none;
@@ -51,22 +51,22 @@
   z-index: 1;
 }
 
-.test option {
+.list option {
   padding: 16px;
   transition:all 0.4s ease-out;
 }
 
-.test option:hover {
+.list option:hover {
   background: #fff;
   color: #4c4a49;
   padding: 16px;
 }
 
-.test option:last-of-type:hover {
+.list option:last-of-type:hover {
   border-radius: 0 0 7px 7px;
 }
 
-.test:hover {
+.list:hover {
   display: block;
 }
 
