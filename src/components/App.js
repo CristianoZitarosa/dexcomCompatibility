@@ -60,7 +60,7 @@ class App extends Component {
 **/
   fillAboutPage = (e) => {
     if ( this.existsElem(document.getElementById('aboutMessage')) ) {
-      document.getElementById('aboutMessage').innerHTML = languages[e].test;
+      document.getElementById('aboutMessage').innerHTML = languages[e].aboutPage;
     }
   }
 
