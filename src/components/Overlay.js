@@ -113,7 +113,7 @@ class Overlay extends Component {
           <div className="langSwitch"> {/* Select lingua e bandiara */}
 
             {/* Selezione della lingua */}
-            <select id='select' onChange={ selectLang }> {/* menu selezione lingue */}
+            <select aria-label={ languages[0].ariaLabel } id='select' onChange={ selectLang }> {/* menu selezione lingue */}
               { options }
             </select>
 

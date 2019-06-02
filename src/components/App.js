@@ -14,39 +14,55 @@ class App extends Component {
   state = { id: 0 }
 
 /**
-* Funzione chiamata dall'overlay. Quando cambia l'elemento del menu lingua
-* il value del target selezionato è passato come stato e viene memorizzato nello
-* storage per futuro utilizzo
+* Funzione chiamata dai tag <select> in <Overlay> e <Nav>.
+* Al cambio lingua nei <select>esegue le seguenti attività:
+*   - setta l'attributo "value" della lingua come stato corrente;
+*   - setta la lingua nel localStorage;
+*   - scrive l'About page in base alla lingua corrente;
+*   - aggiorna attributi ARIA;
+*   - aggiorna lingua corrente in <Nav>
 **/
   selectLang = (e) => {
     console.log(`detected click on id "${e.target.value}"`);
+
+    /* aggiorna lo stato */
     this.setState({ id: e.target.value });
+    /* setta la lingua nel localStorage */
     localStorage.setItem("language", e.target.value);
+    /* scrive l'About page in base alla lingua corrente */
     this.fillAboutPage(e.target.value);
+    /* aggiorna attributi ARIA al cambio lingua */
+    this.fillAria(e.target.value);
+    /* aggiorna lingua corrente in <Nav> */
+    document.querySelector('.list').value = localStorage.language;
+
     console.log(`new app state is set on "${e.target.value}"`);
     console.log(`il nuovo stato è quindi "${this.state.id}"`);
   }
 
 /**
-* Funzione chiamata dall'overlay. Se c'è stata una visita aggiorno lo stato dell'app
-* con la lingua nello storage e aggiorno il value del menu di scelta che altrimenti
-* rimarrebbe invariato.
+* Funzione di check chiamata dall'overlay.
+* Se c'è già stata una visita aggiorna lo stato dell'app con la lingua nello
+*   storage e mostra la lingua corrente nei <select> di <Overlay> e <Nav>
+*   che altrimenti rimarrebbero invariati.
 **/
   setLang = () => {
+    /* aggiorna lo stato */
     this.setState({ id: localStorage.language });
-    document.querySelector('#select').value = localStorage.language;
+    /* mostra lingua corrente in <Overlay> */
+    document.getElementById('select').value = localStorage.language;
+    /* mostra lingua corrente in <Nav> */
+    document.querySelector('.list').value = localStorage.language;
   }
 
 /**
 * Con un for, ciclo fino alla lunghezza dell'array lingue assegnando ad element
 *   i valori Html che saranno aggiunti con push() all'array,
 *   aggiornati con gli indici usati da react per creare gli elementi.
-*
-* Il callBack lo applico solo da Nav.js
 **/
-  fillLanguages = (array, element, callBack) => {
+  fillLanguages = (array, element) => {
     for (let i=0; i < languages.length; i++) {
-      element = <option key={ i } value={ i } onClick={ callBack }>{ languages[i].lang }</option>;
+      element = <option key={ i } value={ i }>{ languages[i].lang }</option>;
       array.push(element);
     }
   }
@@ -62,6 +78,14 @@ class App extends Component {
     if ( this.existsElem(document.getElementById('aboutMessage')) ) {
       document.getElementById('aboutMessage').innerHTML = languages[e].aboutPage;
     }
+  }
+
+/**
+* Funzione che aggiorna attributi ARIA al cambio lingua
+**/
+  fillAria = (e) => {
+    document.getElementById('select').setAttribute('aria-label', languages[e].ariaLabel);
+    document.querySelector('.list').setAttribute('aria-label', languages[e].ariaLabel);
   }
 
 /**

@@ -19,13 +19,10 @@ class Nav extends Component {
     * Creo un "array" ed un "el" vuoti
     * Li passo alla funzione fillLanguages(dettagli scritti lì).
     * Ora ho un array che produrrà tanti elementi quante lingue presenti.
-    *
-    * Qui applico il callback sul click, differenzio l'array per sicurezza
-    *   ma ha funzionato anche con gli stessi nomi.
     **/
     const langList = [];
     let langElem = '';
-    this.props.fillLanguages(langList, langElem, selectLang);
+    this.props.fillLanguages(langList, langElem);
 
     return (
       <div className="btn-group">
@@ -41,21 +38,19 @@ class Nav extends Component {
         </Link>
 
         {/* bottone lingua */}
-        <button className="button btn-right" ><i className="fas fa-language"></i> Language
-          <div className="list">
+        {/* <button className="button btn-right" onClick={this.openMenu}><i className="fas fa-language"></i> Language
+          <div className="list"> */}
             {/* NOTA del perchè uso tag <option>!!!
             Devono essere tag <option> per usare attributo <value>
             su altri tag non funzionerebbe restituendo undefined
             nello storage  facendo crashare l'applicazione*/}
-            { langList }
+            {/* { langList }
           </div>
-        </button>
+        </button> */}
 
-        {/* <button className="button">
-          <select id='tete' onChange={this.props.setLan}>
-            <option value='0'>English</option>
-            <option value='1'>Italiano</option>
-          </select></button> */}
+        <select aria-label={ languages[0].ariaLabel } className="list" onChange={ selectLang }>
+          { langList }
+        </select>
 
       </div>
     );
