@@ -31,3 +31,13 @@ body {
 .hide {
   display: none;
 }
+
+/**
+*  This rule applies a white border to all images except to the flag images
+*    in the overlay
+**/
+img:not(#flag) {
+  background: #48b145;/* correct the app icons probably shape are not regular */
+  border: 5px solid #fff;
+  border-radius: 15px;
+}
