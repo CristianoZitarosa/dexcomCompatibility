@@ -25,34 +25,38 @@ class Nav extends Component {
     this.props.fillLanguages(langList, langElem);
 
     return (
-      <div className="btn-group">
+      <header>
 
-        <Link to="/"> {/* bottone home */}
-          <button className="button btn-left">
-            <i className="fas fa-home"></i> Home
-          </button>
-        </Link>
+        <nav className="nav-group">
 
-        <Link to="/about">{/* bottone about */}
-          <button className="button infoButton"><i className="fas fa-info-circle"></i> { aboutBtn }</button>
-        </Link>
+          <Link to="/" aria-label="home"> {/* bottone home */}
+            <button aria-hidden="true" tabIndex="-1" className="button btn-left">
+              <i className="fas fa-home"></i> Home
+            </button>
+          </Link>
 
-        {/* bottone lingua */}
-        {/* <button className="button btn-right" onClick={this.openMenu}><i className="fas fa-language"></i> Language
-          <div className="list"> */}
-            {/* NOTA del perchè uso tag <option>!!!
-            Devono essere tag <option> per usare attributo <value>
-            su altri tag non funzionerebbe restituendo undefined
-            nello storage  facendo crashare l'applicazione*/}
-            {/* { langList }
-          </div>
-        </button> */}
+          <Link to="/about" aria-label="info">{/* bottone about */}
+            <button aria-hidden="true" tabIndex="-1" className="button infoButton"><i className="fas fa-info-circle"></i> { aboutBtn }</button>
+          </Link>
 
-        <select aria-label={ ariaLabel } className="list" onChange={ selectLang }>
-          { langList }
-        </select>
+          {/* bottone lingua */}
+          {/* <button className="button btn-right" onClick={this.openMenu}><i className="fas fa-language"></i> Language
+            <div className="list"> */}
+              {/* NOTA del perchè uso tag <option>!!!
+              Devono essere tag <option> per usare attributo <value>
+              su altri tag non funzionerebbe restituendo undefined
+              nello storage  facendo crashare l'applicazione*/}
+              {/* { langList }
+            </div>
+          </button> */}
 
-      </div>
+          <select aria-label={ ariaLabel } className="list" onChange={ selectLang }>
+            { langList }
+          </select>
+
+        </nav>
+
+      </header>
     );
 
   }
