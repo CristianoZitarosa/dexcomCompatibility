@@ -11,7 +11,7 @@ class Nav extends Component {
     **/
     const selectLang = this.props.selectLang;
     const currentLang = languages[this.props.id];
-    const { aboutBtn } = currentLang;
+    const { aboutBtn, ariaLabel } = currentLang;
 
     /**
     * Processo usato per ciclizzare la creazione delle lingue
@@ -48,7 +48,7 @@ class Nav extends Component {
           </div>
         </button> */}
 
-        <select aria-label={ languages[0].ariaLabel } className="list" onChange={ selectLang }>
+        <select aria-label={ ariaLabel } className="list" onChange={ selectLang }>
           { langList }
         </select>
 
