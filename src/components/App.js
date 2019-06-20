@@ -122,6 +122,7 @@ class App extends Component {
             {/* Componente Nav ovvero i bottoni */}
             <Nav id={ this.state.id } selectLang={ this.selectLang } fillLanguages={this.fillLanguages}/>
 
+            <main>
             {/* barra dei messaggi */}
             <p id="barMessage">
               <span className="homeMessage">{ select }</span>
@@ -141,6 +142,8 @@ class App extends Component {
             <Route path="/g5" component={ G5app } />
             <Route path="/clarity" component={ Clarity } />
             <Route path="/follow" component={ Follow } />
+          </main>
+
           </div>
         }/>
         {/* Componente NoMatch, visibile se linkata una pagina inesistente */}
