@@ -103,7 +103,7 @@ class Overlay extends Component {
     const selectLang = this.props.selectLang;
     const setValues = this.setValues;
     const currentLang = languages[this.props.id];
-    const { flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
+    const { ariaLabel, flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
 
     return (
       <div className="emptyOverlay"> {/* Overlay secondario, per bloccare/sfumare contenuto pagina sottostante prima di aver letto info o accettato di continuare*/}
@@ -113,19 +113,19 @@ class Overlay extends Component {
           <div className="langSwitch"> {/* Select lingua e bandiara */}
 
             {/* Selezione della lingua */}
-            <select aria-label={ languages[0].ariaLabel } id='select' onChange={ selectLang }> {/* menu selezione lingue */}
+            <select aria-label={ ariaLabel } id='select' onChange={ selectLang }> {/* menu selezione lingue */}
               { options }
             </select>
 
             {/* Bandiera */}
-            <img id='flag' width="35" height="35" src={ flag } alt="flag"/> {/* bandiera */}
+            <img id='flag' aria-hidden="true" width="35" height="35" src={ flag } alt="flag"/> {/* bandiera */}
 
           </div>
 
-          <p>{ txtFrstLn }</p> {/* messaggio overlay, riga 1 */}
-          <p>{ txtScdLn }</p> {/* messaggio overlay, riga 2 */}
+          <h4>{ txtFrstLn }</h4> {/* messaggio overlay, riga 1 */}
+          <h4>{ txtScdLn }</h4> {/* messaggio overlay, riga 2 */}
 
-        <Link to="/about"> {/* bottone informazioni */}
+        <Link to="/about" tabIndex="-1"> {/* bottone informazioni */}
           <button type="button" name="getInformed" id="getInformed" onClick={ setValues }>
             <i className="fas fa-info-circle pulse"></i>{ getInfo }
           </button>

@@ -30,9 +30,13 @@
   font-size: 1.1em;
 }
 
+#landingMessage h4 {
+  font-weight: normal;
+  margin: 18px 0;
+}
+
 #getInformed,
 #agreeButton {
-  border: none;
   border-radius: 5px;
   color: white;
   cursor: pointer;
@@ -59,12 +63,14 @@
 }
 
 #getInformed {
-  background: #d42929;
+  border: 3px solid #d42929;
+  background: #292929;
   margin-right: 30px;
 }
 
 #agreeButton {
-  background: #039403;
+  border: 3px solid #039403;
+  background: #292929;
   margin-right: 30px;
 }
 
