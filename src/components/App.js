@@ -8,6 +8,11 @@ import About from './About.js';
 import NoMatch from './NoMatch.js';
 import languages from '../languages/languages.json';
 
+import G6app from './Apps/G6app.js';
+import G5app from './Apps/G5app.js';
+import Clarity from './Apps/Clarity.js';
+import Follow from './Apps/Follow.js';
+
 class App extends Component {
 
 // Se non già impostato diversamente, la lingua di base è inglese
@@ -132,6 +137,10 @@ class App extends Component {
               <Route component={ Choice } />
             </Switch>
 
+            <Route path="/g6" component={ G6app } />
+            <Route path="/g5" component={ G5app } />
+            <Route path="/clarity" component={ Clarity } />
+            <Route path="/follow" component={ Follow } />
           </div>
         }/>
         {/* Componente NoMatch, visibile se linkata una pagina inesistente */}

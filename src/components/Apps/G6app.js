@@ -8,7 +8,9 @@ class G6app extends Component {
   }
 
   componentWillUnmount() {
-    document.querySelector('.selectionContainer').classList.remove('fixBorder');
+    if (document.querySelector('.selectionContainer'))
+      document.querySelector('.selectionContainer').classList.remove('fixBorder');
+  }
   }
 
   render() {
