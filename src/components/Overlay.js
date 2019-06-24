@@ -12,6 +12,16 @@ class Overlay extends Component {
   componentDidMount() {
     this.checkStorage();
     this.checkLang();
+    this.checkOverlayClass();
+  }
+
+/**
+* Se Overlay non ha la classe .hide (e quindi è visibile) blocca il focus
+* nell'overlay.
+**/
+  checkOverlayClass = () => {
+    if (!document.querySelector('.emptyOverlay').classList.contains('hide'))
+      this.trap();
   }
 
 /**
@@ -47,7 +57,7 @@ class Overlay extends Component {
   closeOverlay = () => {
 // nota: rimuovo il check di esistenza per l'overlay. xchè lo avevo settato?
     document.querySelector('.emptyOverlay').classList.add('hide');
-    document.body.classList.add("scroll");
+    document.body.classList.add('scroll');
     // if (document.querySelector('.overlay') !== null) {
     //   document.querySelector('.overlay').classList.add('close');
     //   document.body.classList.add("scroll");
@@ -86,6 +96,74 @@ class Overlay extends Component {
     this.setStorage();
   }
 
+/**
+* Trappola focus nell'overlay. Quando overlay è invisible si sblocca da solo.
+**/
+  trap = () => {
+    document.getElementById('landingMessage').addEventListener('keydown', trapTabKey);
+    let focusableElementsString = 'select, button';
+    let focusableElements = document.getElementById('landingMessage').querySelectorAll(focusableElementsString);
+    focusableElements = Array.prototype.slice.call(focusableElements);
+    let firstTabStop = focusableElements[0];
+    let lastTabStop = focusableElements[focusableElements.length - 1];
+    firstTabStop.focus();
+    function trapTabKey(e) {
+      // Check for TAB key press
+      if (e.keyCode === 9) {
+        // SHIFT + TAB
+        if (e.shiftKey) {
+          if (document.activeElement === firstTabStop) {
+            e.preventDefault();
+            lastTabStop.focus();
+          }
+        // TAB
+        } else {
+          if (document.activeElement === lastTabStop) {
+            e.preventDefault();
+            firstTabStop.focus();
+          }
+        }
+      }
+    }
+  }
+
+/**
+* Premendo il tasto agree, switcha il focus sul Nav a seconda del path corrente.
+* Agree chiude solo l'overlay quindi la pagina sotto dipende dal link corrente.
+**/
+  focusAgree = () => {
+    switch (window.location.pathname) {
+      case '/about':
+        document.getElementById('about').focus();
+        break;
+      default:
+        document.getElementById('home').focus();
+    }
+  }
+
+/**
+* Focus su About, ho premuto il tasto per avere +Info.
+**/
+  focusInfo = () => {
+    document.getElementById('about').focus();
+  }
+
+/**
+* Azioni avviate premendo il tasto +Info
+**/
+  actionInfo = () => {
+    this.setValues();
+    this.focusInfo();
+  }
+
+/**
+* Azioni avviate premendo il tasto Agree
+**/
+  actionAgree = () => {
+    this.setValues();
+    this.focusAgree();
+  }
+
   render() {
     /**
     * Processo usato per ciclizzare la creazione delle lingue nel menu select.
@@ -100,8 +178,9 @@ class Overlay extends Component {
     /**
     * Semplificazioni codice
     **/
+    const actionInfo = this.actionInfo;
+    const actionAgree = this.actionAgree;
     const selectLang = this.props.selectLang;
-    const setValues = this.setValues;
     const currentLang = languages[this.props.id];
     const { ariaLabel, flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
 
@@ -126,12 +205,12 @@ class Overlay extends Component {
           <h4>{ txtScdLn }</h4> {/* messaggio overlay, riga 2 */}
 
         <Link to="/about" tabIndex="-1"> {/* bottone informazioni */}
-          <button type="button" name="getInformed" id="getInformed" onClick={ setValues }>
+          <button type="button" name="getInformed" id="getInformed" onClick={ actionInfo }>
             <i className="fas fa-info-circle pulse"></i>{ getInfo }
           </button>
         </Link>
 
-        <button type="button" name="agreeButton" id="agreeButton" onClick={ setValues }> {/* bottone accetta */}
+        <button type="button" name="agreeButton" id="agreeButton" onClick={ actionAgree }> {/* bottone accetta */}
           <i className="fas fa-thumbs-up pulse"></i>{ agree }
         </button>
 

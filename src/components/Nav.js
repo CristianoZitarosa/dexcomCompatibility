@@ -29,13 +29,13 @@ class Nav extends Component {
 
         <nav className="nav-group">
 
-          <Link to="/" aria-label="home"> {/* bottone home */}
+          <Link id="home" to="/" aria-label="home"> {/* bottone home */}
             <button aria-hidden="true" tabIndex="-1" className="button btn-left">
               <i className="fas fa-home"></i> Home
             </button>
           </Link>
 
-          <Link to="/about" aria-label="info">{/* bottone about */}
+          <Link id="about" to="/about" aria-label="info">{/* bottone about */}
             <button aria-hidden="true" tabIndex="-1" className="button infoButton"><i className="fas fa-info-circle"></i> { aboutBtn }</button>
           </Link>
 
