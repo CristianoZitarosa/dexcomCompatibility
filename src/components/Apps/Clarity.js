@@ -4,6 +4,7 @@ import '../../style/appsStyle.css';
 class Clarity extends Component {
 
   componentDidMount() {
+    document.querySelector('.countries').focus();
     document.querySelector('.selectionContainer').classList.add('fixBorder');
   }
 
@@ -17,7 +18,7 @@ class Clarity extends Component {
 
       <div className="container">
         <div className="groupHead">
-          <p className="countries">
+          <p tabIndex="-1" className="countries">
             Australia, Austria, Bahrain, Belgium, Czech Republic, Denmark, Finland, France, Germany, Hong Kong, Ireland, Israel, Italy, Jordan, Kuwait, Lebanon, Luxembourg, Netherlands, New Zealand, Norway, Oman, Poland, Qatar, Saudi Arabia, South Africa, South Korea, Spain, Sweden, Switzerland, UAE, United Kingdom
           </p>
         </div>
