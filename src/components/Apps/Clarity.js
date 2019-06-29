@@ -6,11 +6,14 @@ import languages from '../../languages/languages.json';
 class Clarity extends Component {
 
   componentDidMount() {
-    document.querySelector('.countries').focus();
+    /* focus su elemento pagina */
+    document.querySelector('.countriesTopHeader').focus();
+    /* toglie border radius */
     document.querySelector('.selectionContainer').classList.add('fixBorder');
   }
 
   componentWillUnmount() {
+    /* rimette border radius (controlla prima esistenza elemento)  */    
     if (document.querySelector('.selectionContainer'))
       document.querySelector('.selectionContainer').classList.remove('fixBorder');
   }
