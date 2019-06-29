@@ -2,7 +2,6 @@
   {
     "lang": "English",
     "flag": "https://image.flaticon.com/icons/svg/555/555417.svg",
-    "ariaLabel": "Select a language",
 
     "txtFrstLn": "Please read carefully:",
     "txtScdLn": "This is NOT an official page maintained by Dexcom!",
@@ -18,7 +17,6 @@
   {
     "lang": "Italiano",
     "flag": "https://image.flaticon.com/icons/svg/555/555668.svg",
-    "ariaLabel": "Seleziona una lingua",
 
     "txtFrstLn": "Per favore leggi attentamente:",
     "txtScdLn": "Questa NON è una pagina ufficiale gestita da Dexcom!",

@@ -1,0 +1,21 @@
+[
+  {
+    "lang": "English",
+
+    "devices": "Devices",
+    "watches": "Watches",
+    "selectLabel": "Select a language",
+    "homeLabel":"homepage",
+    "infoLabel":"about this page"
+  },
+
+  {
+    "lang": "Italiano",
+
+    "devices": "Dispositivi",
+    "watches": "Orologi",
+    "selectLabel": "Seleziona una lingua",
+    "homeLabel":"pagina iniziale",
+    "infoLabel":"informazioni"
+  }
+]
