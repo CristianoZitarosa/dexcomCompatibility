@@ -138,10 +138,10 @@ class App extends Component {
               <Route component={ Choice } />
             </Switch>
 
-            <Route path="/g6" component={ G6app } />
-            <Route path="/g5" component={ G5app } />
-            <Route path="/clarity" component={ Clarity } />
-            <Route path="/follow" component={ Follow } />
+            <Route path="/g6" render={()=> <G6app id={ this.state.id }/>} />
+            <Route path="/g5" render={()=> <G5app id={ this.state.id }/>} />
+            <Route path="/clarity" render={()=> <Clarity id={ this.state.id }/>} />
+            <Route path="/follow" render={()=> <Follow id={ this.state.id }/>} />
           </main>
 
           </div>
