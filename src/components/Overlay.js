@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/Overlay.css';
 import languages from '../languages/languages.json';
+import ARIA from '../languages/ARIA.json';
 
 class Overlay extends Component {
 
@@ -182,7 +183,9 @@ class Overlay extends Component {
     const actionAgree = this.actionAgree;
     const selectLang = this.props.selectLang;
     const currentLang = languages[this.props.id];
-    const { ariaLabel, flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
+    const { flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
+    const currentAria = ARIA[this.props.id];
+    const { selectLabel } = currentAria;
 
     return (
       <div className="emptyOverlay"> {/* Overlay secondario, per bloccare/sfumare contenuto pagina sottostante prima di aver letto info o accettato di continuare*/}
@@ -192,7 +195,7 @@ class Overlay extends Component {
           <div className="langSwitch"> {/* Select lingua e bandiara */}
 
             {/* Selezione della lingua */}
-            <select aria-label={ ariaLabel } id='select' onChange={ selectLang }> {/* menu selezione lingue */}
+            <select aria-label={ selectLabel } id='select' onChange={ selectLang }> {/* menu selezione lingue */}
               { options }
             </select>
 
