@@ -42,17 +42,6 @@ class Nav extends Component {
             <button aria-hidden="true" tabIndex="-1" className="button infoButton"><i className="fas fa-info-circle"></i> { aboutBtn }</button>
           </Link>
 
-          {/* bottone lingua */}
-          {/* <button className="button btn-right" onClick={this.openMenu}><i className="fas fa-language"></i> Language
-            <div className="list"> */}
-              {/* NOTA del perchè uso tag <option>!!!
-              Devono essere tag <option> per usare attributo <value>
-              su altri tag non funzionerebbe restituendo undefined
-              nello storage  facendo crashare l'applicazione*/}
-              {/* { langList }
-            </div>
-          </button> */}
-
           <select aria-label={ selectLabel } className="list" onChange={ selectLang }>
             { langList }
           </select>
