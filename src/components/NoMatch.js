@@ -8,7 +8,7 @@ class NoMatch extends Component {
     return (
 
       <div id='nomatch'>
-        <img id="emoji" width="150" height="150" src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/65/loudly-crying-face_1f62d.png' alt="emoji"/>
+        <img id="emoji" width="150" height="150" src="./images/loudly-crying-face.png" alt="emoji"/>
         <h1>Page not found!</h1>
         <Link to="/">
           <button id='nomatchBtn' onClick={ this.props.storage }><i className="fas fa-backward pulse"></i> <strong>Back to Home</strong></button>

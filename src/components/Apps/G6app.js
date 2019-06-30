@@ -42,7 +42,7 @@ class G6app extends Component {
           <p>
             Dexcom G6 App
           </p>
-          <img width="75" height="75" src="https://s3-us-west-2.amazonaws.com/dexcommisc/App+images/g6-app.png" alt="G6 App" />
+          <img width="75" height="75" src="./images/g6.png" alt="G6 App" />
         </aside>
 
         <article className="right">

@@ -43,7 +43,7 @@ class Follow extends Component {
           <p>
             Dexcom Follow App
           </p>
-          <img width="75" height="75" src="https://s3-us-west-2.amazonaws.com/dexcommisc/App+images/follow-app.png" alt="Follow App" />
+          <img width="75" height="75" src="./images/follow.png" alt="Follow App" />
         </aside>
 
         <article className="right">

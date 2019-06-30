@@ -13,7 +13,7 @@ class Clarity extends Component {
   }
 
   componentWillUnmount() {
-    /* rimette border radius (controlla prima esistenza elemento)  */    
+    /* rimette border radius (controlla prima esistenza elemento)  */
     if (document.querySelector('.selectionContainer'))
       document.querySelector('.selectionContainer').classList.remove('fixBorder');
   }
@@ -42,7 +42,7 @@ class Clarity extends Component {
           <p>
             Dexcom CLARITY App
           </p>
-          <img width="75" height="75" src="https://s3-us-west-2.amazonaws.com/dexcommisc/App+images/clarity.jpg" alt="Clarity App"/>
+          <img width="75" height="75" src="./images/clarity.png" alt="Clarity App"/>
         </aside>
 
         <article className="right">
