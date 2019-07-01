@@ -166,7 +166,7 @@ class Overlay extends Component {
     const { selectLabel, agreeOverlayLabel, infOverlayLabel } = currentAria;
 
     return (
-      <div role="contentinfo" className="emptyOverlay"> {/* Overlay secondario, per bloccare/sfumare contenuto pagina sottostante prima di aver letto info o accettato di continuare*/}
+      <div role="dialog" className="emptyOverlay"> {/* Overlay secondario, per bloccare/sfumare contenuto pagina sottostante prima di aver letto info o accettato di continuare*/}
 
       <div className="overlay"> {/* Overlay primario */}
         <div id="landingMessage"> {/* Testo e immagini dell'overlay */}
