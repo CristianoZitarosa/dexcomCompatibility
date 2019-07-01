@@ -23,7 +23,8 @@ article p {
 .groupHead {
   background: #f79646;
   border: 1px solid #eeedeb;
-  color: #fff;
+  /* color: #fff; */
+  color: #333;
   flex: 1 100%;
   width: auto;
 }
@@ -43,7 +44,8 @@ article p {
   background: #f79646;
   border-left: 1px solid #eeedeb;
   border-radius: 0 0 0 7px;
-  color: #fff;
+  /* color: #fff; */
+  color: #333;
   display: flex;
   flex: 1;
   flex-flow: column;

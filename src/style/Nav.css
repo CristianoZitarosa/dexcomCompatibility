@@ -8,7 +8,7 @@
 .button {
   background: #4c4a49;
   border: none;
-  color: white;
+  color: #fff;
   cursor: pointer;
   font-size: 16px;
   padding: 15px 32px;
@@ -38,7 +38,7 @@
   border-radius: 0 7px 0 0;
   border-style: solid;
   border-width: 14px 12px 15px 12px;
-  color: white;
+  color: #fff;
   font-size: 1em;
 }
 

@@ -1,11 +1,12 @@
 .selectionContainer a:link,
 .selectionContainer a:visited {
-  color: #fff;
+  color: #333;
   text-decoration: none;
 }
 
 .choice {
-  color: #fff;
+  /* color: #fff; */
+  color: #333;
   display: flex;
   flex-flow: column;
 }

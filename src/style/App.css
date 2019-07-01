@@ -15,7 +15,8 @@ body {
 #barMessage {
   background: #f79646;
   border-radius: 7px 7px 0 0;
-  color: #fff;
+  /* color: #fff; */
+  color: #333;
   margin: auto;
   margin-bottom: 1px;
   padding: 20px;
