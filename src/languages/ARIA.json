@@ -5,8 +5,10 @@
     "devices": "Devices",
     "watches": "Watches",
     "selectLabel": "Select a language",
-    "homeLabel":"homepage",
-    "infoLabel":"about this page"
+    "homeLabel": "homepage",
+    "infoLabel": "about this page",
+    "infOverlayLabel": "info about this page",
+    "agreeOverlayLabel": "accept and continue"
   },
 
   {
@@ -15,7 +17,9 @@
     "devices": "Dispositivi",
     "watches": "Orologi",
     "selectLabel": "Seleziona una lingua",
-    "homeLabel":"pagina iniziale",
-    "infoLabel":"informazioni"
+    "homeLabel": "pagina iniziale",
+    "infoLabel": "informazioni",
+    "infOverlayLabel": "informazioni su questa pagina",
+    "agreeOverlayLabel": "accetta e continua"
   }
 ]

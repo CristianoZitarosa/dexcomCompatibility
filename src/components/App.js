@@ -40,6 +40,8 @@ class App extends Component {
     this.fillAria(e.target.value);
     /* aggiorna lingua corrente in <Nav> */
     document.querySelector('.list').value = localStorage.language;
+    /* aggiorna il <title> alla lingua corrente */
+    document.querySelector('title').innerText = languages[e.target.value].title;
 
     console.log(`new app state is set on "${e.target.value}"`);
     console.log(`il nuovo stato è quindi "${this.state.id}"`);
@@ -58,6 +60,8 @@ class App extends Component {
     document.getElementById('select').value = localStorage.language;
     /* mostra lingua corrente in <Nav> */
     document.querySelector('.list').value = localStorage.language;
+    /* aggiorna il <title> alla lingua corrente */
+    document.querySelector('title').innerText = languages[localStorage.language].title;
   }
 
 /**

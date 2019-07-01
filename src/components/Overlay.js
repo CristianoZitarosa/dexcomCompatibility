@@ -163,10 +163,10 @@ class Overlay extends Component {
     const currentLang = languages[this.props.id];
     const { flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
     const currentAria = ARIA[this.props.id];
-    const { selectLabel } = currentAria;
+    const { selectLabel, agreeOverlayLabel, infOverlayLabel } = currentAria;
 
     return (
-      <div className="emptyOverlay"> {/* Overlay secondario, per bloccare/sfumare contenuto pagina sottostante prima di aver letto info o accettato di continuare*/}
+      <div role="contentinfo" className="emptyOverlay"> {/* Overlay secondario, per bloccare/sfumare contenuto pagina sottostante prima di aver letto info o accettato di continuare*/}
 
       <div className="overlay"> {/* Overlay primario */}
         <div id="landingMessage"> {/* Testo e immagini dell'overlay */}
@@ -186,12 +186,12 @@ class Overlay extends Component {
           <h4>{ txtScdLn }</h4> {/* messaggio overlay, riga 2 */}
 
         <Link to="/about" tabIndex="-1"> {/* bottone informazioni */}
-          <button type="button" name="getInformed" id="getInformed" onClick={ actionInfo }>
+          <button aria-label={ infOverlayLabel } type="button" name="getInformed" id="getInformed" onClick={ actionInfo }>
             <i className="fas fa-info-circle pulse"></i>{ getInfo }
           </button>
         </Link>
 
-        <button type="button" name="agreeButton" id="agreeButton" onClick={ actionAgree }> {/* bottone accetta */}
+        <button aria-label={ agreeOverlayLabel } type="button" name="agreeButton" id="agreeButton" onClick={ actionAgree }> {/* bottone accetta */}
           <i className="fas fa-thumbs-up pulse"></i>{ agree }
         </button>
 

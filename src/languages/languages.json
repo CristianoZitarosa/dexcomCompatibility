@@ -2,9 +2,10 @@
   {
     "lang": "English",
     "flag": "https://image.flaticon.com/icons/svg/555/555417.svg",
+    "title": "Dexcom App Compatibility - Unofficial page",
 
     "txtFrstLn": "Please read carefully:",
-    "txtScdLn": "This is NOT an official page maintained by Dexcom!",
+    "txtScdLn": "This is NOT an official website maintained by Dexcom!",
     "getInfo": " Get Informed",
     "agree": " Agree",
 
@@ -24,9 +25,10 @@
   {
     "lang": "Italiano",
     "flag": "https://image.flaticon.com/icons/svg/555/555668.svg",
+    "title": "Dexcom Compatibilità delle App - Sito non ufficiale",
 
     "txtFrstLn": "Per favore leggi attentamente:",
-    "txtScdLn": "Questa NON è una pagina ufficiale gestita da Dexcom!",
+    "txtScdLn": "Questo NON è un sito ufficiale gestito da Dexcom!",
     "getInfo": " Informati",
     "agree": " Accetta",
 
