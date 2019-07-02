@@ -52,29 +52,33 @@ class Clarity extends Component {
               <h3 className="insideText">
                 <i className="fab fa-android noBold"></i> Android
               </h3>
-              <ul>
+              <section>
                 <h4>
                   <i className="fas fa-mobile-alt"></i> { devices }
                 </h4>
-                <li className="insideText">
-                  <p>{ compatibilityAndroidMessage }</p>
-                </li>
-              </ul>
+                <ul>
+                  <li className="insideText">
+                    <p>{ compatibilityAndroidMessage }</p>
+                  </li>
+                </ul>
+              </section>
             </li>
 
             <li>
               <h3 className="insideText">
                 <i className="fab fa-apple noBold"></i> Apple
               </h3>
-              <ul>
+              <section>
                 <h4>
                   <i className="fas fa-mobile-alt"></i> { devices }
                 </h4>
-                <li className="insideText">
-                  <p>iPhone, iPad, and iPad touch</p>
-                  <p>{ compatibilityIOSMessage }</p>
-                </li>
-              </ul>
+                <ul>
+                  <li className="insideText">
+                    <p>iPhone, iPad, and iPad touch</p>
+                    <p>{ compatibilityIOSMessage }</p>
+                  </li>
+                </ul>
+              </section>
             </li>
           </ul>
 
