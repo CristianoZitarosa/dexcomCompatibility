@@ -25,7 +25,7 @@ class G5app extends Component {
     const currentLang = languages[this.props.id];
     const { watchMessage, wearVersions, watchVersions, iOSVersions } = currentLang;
     const currentARIA = ARIA[this.props.id];
-    const { devices, watches, availableCountries } = currentARIA;
+    const { devices, watches, availableCountries, korAndroidIndication } = currentARIA;
 
     return (
 
@@ -155,9 +155,9 @@ class G5app extends Component {
         <div className="partition" aria-hidden="true" />
 
         <section className="groupHead korea">
-          <h3 className="countriesTopHeader">Availability by country:</h3>
+          <h3 className="countriesTopHeader">{ availableCountries }:</h3>
           <p className="countries">
-            South Korea - Android ONLY <i className="fab fa-android noBold"></i>
+            { korAndroidIndication } <i className="fab fa-android noBold"></i>
           </p>
         </section>
 
@@ -174,7 +174,7 @@ class G5app extends Component {
             <li>
               <section>
                 <h4>
-                  <i className="fas fa-mobile-alt"></i> Devices
+                  <i className="fas fa-mobile-alt"></i> { devices }
                 </h4>
                 <ul>
                   <li className="insideText">
@@ -205,7 +205,7 @@ class G5app extends Component {
             <li>
               <section>
                 <h4>
-                  <i className="far fa-clock"></i> Watches
+                  <i className="far fa-clock"></i> { watches }
                 </h4>
                 <ul>
                   <li className="insideText">

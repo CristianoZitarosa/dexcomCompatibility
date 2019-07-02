@@ -9,7 +9,8 @@
     "infoLabel": "about this website",
     "infOverlayLabel": "info about this website",
     "agreeOverlayLabel": "accept and continue",
-    "availableCountries": "Availability by country"
+    "availableCountries": "Availability by country",
+    "korAndroidIndication": "South Korea - Android ONLY"
   },
 
   {
@@ -22,6 +23,7 @@
     "infoLabel": "informazioni su questo sito",
     "infOverlayLabel": "informazioni su questo sito",
     "agreeOverlayLabel": "accetta e continua",
-    "availableCountries": "Disponibile in questi paesi"
+    "availableCountries": "Disponibile in questi paesi",
+    "korAndroidIndication": "Corea del Sud - solo Android"
   }
 ]

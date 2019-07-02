@@ -25,7 +25,7 @@ class Follow extends Component {
     const currentLang = languages[this.props.id];
     const { androidVersions, iOSVersions } = currentLang;
     const currentARIA = ARIA[this.props.id];
-    const { devices, availableCountries } = currentARIA;
+    const { devices, availableCountries, korAndroidIndication } = currentARIA;
 
 
     return (
@@ -125,9 +125,9 @@ class Follow extends Component {
         <div className="partition" aria-hidden="true" />
 
         <section className="groupHead korea">
-          <h3 className="countriesTopHeader">Availability by country:</h3>
+          <h3 className="countriesTopHeader">{ availableCountries }:</h3>
           <p className="countries">
-            South Korea - Android ONLY <i className="fab fa-android noBold"></i>
+            { korAndroidIndication } <i className="fab fa-android noBold"></i>
           </p>
         </section>
 
@@ -142,12 +142,9 @@ class Follow extends Component {
 
           <ul>
             <li>
-              <h3 className="insideText">
-                <i className="fab fa-android noBold"></i> Android
-              </h3>
               <section>
                 <h4>
-                  <i className="fas fa-mobile-alt"></i> Devices
+                  <i className="fas fa-mobile-alt"></i> { devices }
                 </h4>
                 <ul>
                   <li className="insideText">
