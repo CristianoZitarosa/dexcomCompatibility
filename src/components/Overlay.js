@@ -52,7 +52,7 @@ class Overlay extends Component {
 * che ha già visitato
 **/
   setStorage = () => {
-    localStorage.setItem("isNewUser", false);
+    localStorage.setItem('isNewUser', false);
     console.log(`There was no localStorage before, I have set "${localStorage.isNewUser}" right now.` );
   }
 

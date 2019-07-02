@@ -23,7 +23,7 @@ class G6app extends Component {
     * Semplificazioni codice
     **/
     const currentLang = languages[this.props.id];
-    const { watchMessage,wearVersions, watchVersions, iOSVersions } = currentLang;
+    const { watchMessage, wearVersions, watchVersions, iOSVersions } = currentLang;
     const currentARIA = ARIA[this.props.id];
     const { devices, watches, availableCountries } = currentARIA;
 

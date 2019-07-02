@@ -33,7 +33,7 @@ class App extends Component {
     /* aggiorna lo stato */
     this.setState({ id: e.target.value });
     /* setta la lingua nel localStorage */
-    localStorage.setItem("language", e.target.value);
+    localStorage.setItem('language', e.target.value);
     /* scrive l'About page in base alla lingua corrente */
     this.fillAboutPage(e.target.value);
     /* aggiorna attributi ARIA al cambio lingua */
