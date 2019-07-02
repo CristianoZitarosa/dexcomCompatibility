@@ -25,14 +25,14 @@ class Clarity extends Component {
     const currentLang = languages[this.props.id];
     const { compatibilityAndroidMessage, compatibilityIOSMessage } = currentLang;
     const currentARIA = ARIA[this.props.id];
-    const { devices } = currentARIA;
+    const { devices, availableCountries } = currentARIA;
 
     return (
 
       <div className="container">
 
         <section className="groupHead">
-          <h3 tabIndex="-1" className="countriesTopHeader">Availability by country:</h3>
+          <h3 tabIndex="-1" className="countriesTopHeader">{ availableCountries }:</h3>
           <p className="countries">
             Australia, Austria, Bahrain, Belgium, Czech Republic, Denmark, Finland, France, Germany, Hong Kong, Ireland, Israel, Italy, Jordan, Kuwait, Lebanon, Luxembourg, Netherlands, New Zealand, Norway, Oman, Poland, Qatar, Saudi Arabia, South Africa, South Korea, Spain, Sweden, Switzerland, UAE, United Kingdom
           </p>

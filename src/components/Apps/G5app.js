@@ -25,14 +25,14 @@ class G5app extends Component {
     const currentLang = languages[this.props.id];
     const { watchMessage, wearVersions, watchVersions, iOSVersions } = currentLang;
     const currentARIA = ARIA[this.props.id];
-    const { devices, watches } = currentARIA;
+    const { devices, watches, availableCountries } = currentARIA;
 
     return (
 
       <div className="container">
 
         <section className="groupHead">
-          <h3 tabIndex="-1" className="countriesTopHeader">Availability by country:</h3>
+          <h3 tabIndex="-1" className="countriesTopHeader">{ availableCountries }:</h3>
           <p className="countries">
             Australia, Austria, Bahrain, Belgium, Canada, Czech Republic, Denmark, Finland, France, Germany, Hong Kong, Ireland, Israel, Italy, Jordan, Kuwait, Lebanon, Luxembourg, Netherlands, New Zealand, Norway, Oman, Qatar, Saudi Arabia, South Africa, Spain, Sweden, Switzerland, United Arab Emirates, United Kingdom
           </p>

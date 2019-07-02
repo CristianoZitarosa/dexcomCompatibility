@@ -8,7 +8,8 @@
     "homeLabel": "homepage",
     "infoLabel": "about this website",
     "infOverlayLabel": "info about this website",
-    "agreeOverlayLabel": "accept and continue"
+    "agreeOverlayLabel": "accept and continue",
+    "availableCountries": "Availability by country"
   },
 
   {
@@ -20,6 +21,7 @@
     "homeLabel": "pagina iniziale",
     "infoLabel": "informazioni su questo sito",
     "infOverlayLabel": "informazioni su questo sito",
-    "agreeOverlayLabel": "accetta e continua"
+    "agreeOverlayLabel": "accetta e continua",
+    "availableCountries": "Disponibile in questi paesi"
   }
 ]
