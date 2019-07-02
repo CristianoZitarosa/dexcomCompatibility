@@ -6,8 +6,8 @@
     "watches": "Watches",
     "selectLabel": "Select a language",
     "homeLabel": "homepage",
-    "infoLabel": "about this page",
-    "infOverlayLabel": "info about this page",
+    "infoLabel": "about this website",
+    "infOverlayLabel": "info about this website",
     "agreeOverlayLabel": "accept and continue"
   },
 
@@ -18,8 +18,8 @@
     "watches": "Orologi",
     "selectLabel": "Seleziona una lingua",
     "homeLabel": "pagina iniziale",
-    "infoLabel": "informazioni",
-    "infOverlayLabel": "informazioni su questa pagina",
+    "infoLabel": "informazioni su questo sito",
+    "infOverlayLabel": "informazioni su questo sito",
     "agreeOverlayLabel": "accetta e continua"
   }
 ]
