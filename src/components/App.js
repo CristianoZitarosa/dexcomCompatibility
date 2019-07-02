@@ -126,7 +126,7 @@ class App extends Component {
             {/* Componente Nav ovvero i bottoni */}
             <Nav id={ this.state.id } selectLang={ this.selectLang } fillLanguages={this.fillLanguages}/>
 
-            <main>
+            <main aria-live="assertive">
             {/* barra dei messaggi */}
             <p id="barMessage">
               <span className="homeMessage">{ select }</span>
