@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dexcom App compatibility
 
-## Available Scripts
+The Dexcom company provides a web page where users of their products can check devices compatibility with Dexcom Apps.
+As a direct user, at my eyes it looks that the provided web page could be difficult to consult because:
+- all the Apps are displayed in the same long page;
+- devices brands are not groupped and highlighted;
+- sometimes there is a mix of the order of a specific model version for the same brand.
 
-In the project directory, you can run:
+Due the motivations listed above I see difficolt for an user to spot if a specific model is compatible or not, and at the same time it is difficolt to spot if a new model has been added to the list.
+So I decided to create this modification of the original page, with the only purpose to help other users having a better consultation of compatible models.
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Techniques used
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Most of the differences in my version can be found in the code.
+First of all, I decided to create it as similar possible to the original Dexcom page to let users find key points they already know from the Dexcom page. So graphically speaking the main difference of this version is that now it is not a page but a website where the user can choose and display a specific application, can browse forward or back or bookmark a specific content, can choose the language (currently Italian or English) and at last but not least, an user with impairments can finally access the contents.
 
-### `npm test`
+ Here is a summary:
+ - React;
+ - React Router;
+ - localStorage;
+ - Accessibility;
+ - Responsive design.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### React
 
-### `npm run build`
+ To create this website I used React to provide a fast and neat result.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### React Router
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+I used it to provide links to every App so the user can bookmark it for convenience or just browse the website without getting lost or confused. There is  a noMatch page as well to warn users if they type or reach a wrong link.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### localStorage
 
-### `npm run eject`
+I decided to be clear from the first moment an user reaches the website that it is not an original page from Dexcom. So I used an overlay to inform the user and let choose if continue reading or be informed. At the same time it is possible to choose a language (currently Italian or English).
+My use of the localStorage allows the website to remember the previous choiche (if there is one) and to automatically set the last language and close the overlay at a following visit for convenience.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Accessibility
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+On a web page related to user with an impairement as Dexcom users are, it is a sort of lack to presume that among those users there is not an inner group with other impairements as visual and mobility. At the moment all the contents care about semantic and are accessible by screen readers. Hopefully, because the approach to the reading is different, I hope to receive suggestion directly from users to further improve the readability.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Responsive design
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+While the purpose of the original page, as mentioned is to inform users about compatible devices (mostly smarphones) with Dexcom Apps, it appears here another weakness forgetting to plan that probably many users would go to check compatibility directly from their phone (nowadays high possible). My website is optimized to be displayed on any screen size from smartphones and tablets to computers.
 
-## Learn More
+#### Credits
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+As mentioned I left the appearance as possible similar to the one from Dexcom, so it is important to inform Dexcom is the creator and owner of the main style and the App icons I used on my website.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### License:
 
-### Code Splitting
+MIT License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Copyright (c) 2019 Cristiano Zitarosa
 
-### Analyzing the Bundle Size
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
