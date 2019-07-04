@@ -15,3 +15,31 @@
   padding: 15px 30px;
   width: 400px;
 }
+
+@media screen and (max-width: 411px) {
+
+  #aboutMessage {
+    border: 3px solid #f79646;
+    padding: 10px;
+    width: 274px;
+  }
+
+  #aboutMessage article {
+    text-align: justify;
+  }
+
+  #aboutMessage section {
+    width: 214px;
+  }
+
+}
+
+@media screen and (min-width: 765px) and (max-width: 801px) {
+
+  #aboutMessage {
+    /* width: 649px; */
+    margin: 0 10px;
+    width: 701px;
+  }
+
+}

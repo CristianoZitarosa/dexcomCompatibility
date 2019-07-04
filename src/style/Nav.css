@@ -1,6 +1,5 @@
 .nav-group {
   margin: auto;
-  padding: 45px 45px 0 45px;
   /* text-align: right; */
   width: 890px;
 }
@@ -44,4 +43,58 @@
 
 .show {
   display: block;
+}
+
+@media screen and (max-width: 411px) {
+
+  .nav-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 280px;
+  }
+
+  .button {
+    margin-bottom: 1px;
+    text-align: left;
+    width: 280px;
+    padding: 15px 32px;
+  }
+
+  .btn-left {
+    border-radius: 7px 7px 0 0;
+  }
+
+  .list {
+    border-width: 12px 143px 15px 32px;
+    border-radius: 0;
+    font-size: 1.3em;
+    margin-bottom: 1px;
+  }
+
+}
+
+@media screen and (min-width: 765px) and (max-width: 800px) {
+
+  .nav-group {
+    font-size: 1.2em;
+    width: 725px;
+  }
+
+  .button {
+    font-size: 18px;
+  }
+
+  .list {
+    border-width: 13px 12px 15px 12px;
+  }
+
+}
+
+@media screen and (min-width: 765px) {
+
+  .nav-group {
+    padding: 45px 45px 0 45px;
+  }
+
 }

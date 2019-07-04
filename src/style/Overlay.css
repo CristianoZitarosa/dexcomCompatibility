@@ -96,3 +96,21 @@
   border-radius: 10px;
   margin-left: 25px;
 }
+
+@media screen and (max-width: 411px) {
+
+  #landingMessage h4 {
+    max-width: 90%
+  }
+
+  .overlay {
+    padding: 20px;
+    top: 53%
+  }
+
+  #getInformed,
+  #agreeButton {
+    padding: 15px 7px;
+  }
+
+}

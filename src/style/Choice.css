@@ -41,3 +41,46 @@
   cursor: pointer;
   transform:scale(1.1);
 }
+
+@media screen and (max-width: 411px) {
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .selectionContainer {
+    flex-wrap: wrap;
+  }
+
+  .appSelection {
+    padding: 12px;
+    width: 125px;
+  }
+
+  .selectionContainer {
+    width: 300px;
+  }
+
+}
+
+@media screen and (min-width: 765px) and (max-width: 801px) {
+
+  .appSelection {
+    width: 164px;
+    /* width: 145px; */
+  }
+
+  .appSelection p {
+    font-size: 1.1em;
+  }
+
+  .choice {
+    width: 812px;
+  }
+
+  .selectionContainer {
+    margin: 0 10px;
+  }
+
+}

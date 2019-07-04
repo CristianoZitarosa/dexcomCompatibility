@@ -42,3 +42,22 @@ img:not(#flag):not(#emoji) {
   border: 5px solid #fff;
   border-radius: 15px;
 }
+
+@media screen and (max-width: 411px) {
+
+  #barMessage {
+    width: 260px;
+  }
+
+}
+
+@media screen and (min-width: 765px) and (max-width: 801px) {
+
+  #barMessage {
+    /* width: 700px; */
+    width: 752px;
+    font-size: 1.1em;
+    margin: 0 10px;
+  }
+
+}
