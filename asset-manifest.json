@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dexcomCompatibility/static/css/main.8f9fa27d.chunk.css",
+    "main.js": "/dexcomCompatibility/static/js/main.2d40d9a6.chunk.js",
+    "main.js.map": "/dexcomCompatibility/static/js/main.2d40d9a6.chunk.js.map",
+    "runtime~main.js": "/dexcomCompatibility/static/js/runtime~main.40868e22.js",
+    "runtime~main.js.map": "/dexcomCompatibility/static/js/runtime~main.40868e22.js.map",
+    "static/js/2.ffb7add5.chunk.js": "/dexcomCompatibility/static/js/2.ffb7add5.chunk.js",
+    "static/js/2.ffb7add5.chunk.js.map": "/dexcomCompatibility/static/js/2.ffb7add5.chunk.js.map",
+    "index.html": "/dexcomCompatibility/index.html",
+    "precache-manifest.5f3805b25b23940fe2af51974fb321bb.js": "/dexcomCompatibility/precache-manifest.5f3805b25b23940fe2af51974fb321bb.js",
+    "service-worker.js": "/dexcomCompatibility/service-worker.js",
+    "static/css/main.8f9fa27d.chunk.css.map": "/dexcomCompatibility/static/css/main.8f9fa27d.chunk.css.map"
+  }
+}
