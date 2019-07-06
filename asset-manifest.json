@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dexcomCompatibility/static/css/main.8f9fa27d.chunk.css",
-    "main.js": "/dexcomCompatibility/static/js/main.90f3cce8.chunk.js",
-    "main.js.map": "/dexcomCompatibility/static/js/main.90f3cce8.chunk.js.map",
+    "main.js": "/dexcomCompatibility/static/js/main.8a386276.chunk.js",
+    "main.js.map": "/dexcomCompatibility/static/js/main.8a386276.chunk.js.map",
     "runtime~main.js": "/dexcomCompatibility/static/js/runtime~main.40868e22.js",
     "runtime~main.js.map": "/dexcomCompatibility/static/js/runtime~main.40868e22.js.map",
     "static/js/2.ffb7add5.chunk.js": "/dexcomCompatibility/static/js/2.ffb7add5.chunk.js",
     "static/js/2.ffb7add5.chunk.js.map": "/dexcomCompatibility/static/js/2.ffb7add5.chunk.js.map",
     "index.html": "/dexcomCompatibility/index.html",
-    "precache-manifest.379c4a513e3695bb98d417dd18ed699d.js": "/dexcomCompatibility/precache-manifest.379c4a513e3695bb98d417dd18ed699d.js",
+    "precache-manifest.6791c938d1f1b1168a7514c5fb2ebef8.js": "/dexcomCompatibility/precache-manifest.6791c938d1f1b1168a7514c5fb2ebef8.js",
     "service-worker.js": "/dexcomCompatibility/service-worker.js",
     "static/css/main.8f9fa27d.chunk.css.map": "/dexcomCompatibility/static/css/main.8f9fa27d.chunk.css.map"
   }
