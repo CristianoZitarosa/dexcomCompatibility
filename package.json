@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://CristianoZitarosa.github.io/dexcomCompatibility/",
   "dependencies": {
+    "lodash": "^4.17.14",
+    "lodash.template": "^4.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.0",

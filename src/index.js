@@ -5,7 +5,7 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <BrowserRouter /*basename="/dexcomCompatibility"*/><App /></BrowserRouter>,
+  <BrowserRouter basename="/dexcomCompatibility"><App /></BrowserRouter>,
   document.getElementById('root')
 );
 
