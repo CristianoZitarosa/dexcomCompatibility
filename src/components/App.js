@@ -113,12 +113,14 @@ class App extends Component {
 * Setta lo state dell'APP in base alla provenienza della richiesta:
 * - 0 se richiesto dall'Overlay
 * - 1 se richiesto dal Nav
+* Blocca lo scroll sul <body>
 **/
   modalDisplay = (e) => {
     document.querySelector('.emptyDialog').classList.add('show');
     document.querySelector('.list').focus();
     this.setState({ dialog: e});
     this.trap();
+    document.body.classList.remove('scroll');
   }
 
 /**
@@ -126,9 +128,11 @@ class App extends Component {
 * Riporta il focus sull'elemento da cui proviene la richiesta:
 * - 0 se richiesto dall'Overlay
 * - 1 se richiesto dal Nav
+* Sblocca lo scroll sul <body>
 **/
   modalHide = () => {
     document.querySelector('.emptyDialog').classList.remove('show');
+    document.body.classList.add('scroll');
     if (this.state.dialog === 0) {
       document.querySelector('.langButton').focus();
     } else if (this.state.dialog === 1) {
