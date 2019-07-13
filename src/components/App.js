@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import '../style/App.css';
 import Overlay from './Overlay.js';
 import Nav from './Nav.js';
+import Dialog from './Dialog.js';
 import Choice from './Choice.js';
 import About from './About.js';
 import NoMatch from './NoMatch.js';
@@ -16,7 +17,7 @@ import Follow from './Apps/Follow.js';
 class App extends Component {
 
 // Se non già impostato diversamente, la lingua di base è inglese
-  state = { id: 0 }
+  state = { id: 0, dialog:'' }
 
 /**
 * Funzione chiamata dai tag <select> in <Overlay> e <Nav>.
@@ -56,9 +57,7 @@ class App extends Component {
   setLang = () => {
     /* aggiorna lo stato */
     this.setState({ id: localStorage.language });
-    /* mostra lingua corrente in <Overlay> */
-    document.getElementById('select').value = localStorage.language;
-    /* mostra lingua corrente in <Nav> */
+    /* mostra lingua corrente nel <select> lingua */
     document.querySelector('.list').value = localStorage.language;
     /* aggiorna il <title> alla lingua corrente */
     document.querySelector('title').innerText = languages[localStorage.language].title;
@@ -93,7 +92,7 @@ class App extends Component {
 * Funzione che aggiorna attributi ARIA al cambio lingua
 **/
   fillAria = (e) => {
-    document.getElementById('select').setAttribute('aria-label', languages[e].ariaLabel);
+    // document.getElementById('select').setAttribute('aria-label', languages[e].ariaLabel);
     document.querySelector('.list').setAttribute('aria-label', languages[e].ariaLabel);
   }
 
@@ -108,6 +107,66 @@ class App extends Component {
     }
   }
 
+/**
+* Mostra il modale di scelta lingua aggiungendo la classe show.
+* Mette in focus il <select>.
+* Setta lo state dell'APP in base alla provenienza della richiesta:
+* - 0 se richiesto dall'Overlay
+* - 1 se richiesto dal Nav
+**/
+  modalDisplay = (e) => {
+    document.querySelector('.emptyDialog').classList.add('show');
+    document.querySelector('.list').focus();
+    this.setState({ dialog: e});
+    this.trap();
+  }
+
+/**
+* Nasconde il modale di scelta lingua rimuovendo la classe show.
+* Riporta il focus sull'elemento da cui proviene la richiesta:
+* - 0 se richiesto dall'Overlay
+* - 1 se richiesto dal Nav
+**/
+  modalHide = () => {
+    document.querySelector('.emptyDialog').classList.remove('show');
+    if (this.state.dialog === 0) {
+      document.querySelector('.langButton').focus();
+    } else if (this.state.dialog === 1) {
+      document.querySelector('.btn-right').focus();
+    }
+  }
+
+/**
+* Intrappola focus nel dialog. Quando dialog è invisible si sblocca da solo.
+**/
+  trap = () => {
+    document.getElementById('modal').addEventListener('keydown', trapTabKey);
+    let focusableElementsString = 'select, button';
+    let focusableElements = document.getElementById('modal').querySelectorAll(focusableElementsString);
+    focusableElements = Array.prototype.slice.call(focusableElements);
+    let firstTabStop = focusableElements[0];
+    let lastTabStop = focusableElements[focusableElements.length - 1];
+    firstTabStop.focus();
+    function trapTabKey(e) {
+      // Check for TAB key press
+      if (e.keyCode === 9) {
+        // SHIFT + TAB
+        if (e.shiftKey) {
+          if (document.activeElement === firstTabStop) {
+            e.preventDefault();
+            lastTabStop.focus();
+          }
+        // TAB
+        } else {
+          if (document.activeElement === lastTabStop) {
+            e.preventDefault();
+            firstTabStop.focus();
+          }
+        }
+      }
+    }
+  }
+
   render() {
 
     const currentLang = languages[this.state.id];
@@ -117,14 +176,16 @@ class App extends Component {
 
       <Switch>
         {/* Switch principale che restituisce sempre il component NoMatch, a meno che non venga linkata esattamente una delle pagine seguenti, quindi tutte quelle esistenti nell'app */}
-        <Route exact path={['/','/g6', '/g5', '/clarity', '/follow', '/about']} render={()=>
+        <Route exact path={['/','/g6', '/g5', '/clarity', '/follow', '/about', '/language']} render={()=>
           <div>
+            {/* Componente Dialog ovvero cambio lingua */}
+            <Dialog id={ this.state.id } selectLang={ this.selectLang } fillLanguages={ this.fillLanguages } modalHide={ this.modalHide }/>
 
             {/* Componente Overlay */}
-            <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }  fillLanguages={this.fillLanguages} existsElem={ this.existsElem }/>
+            <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }  fillLanguages={ this.fillLanguages } existsElem={ this.existsElem } modalDisplay={ this.modalDisplay }/>
 
             {/* Componente Nav ovvero i bottoni */}
-            <Nav id={ this.state.id } selectLang={ this.selectLang } fillLanguages={this.fillLanguages}/>
+            <Nav id={ this.state.id } modalDisplay={ this.modalDisplay } />
 
             <main aria-live="assertive">
             {/* barra dei messaggi */}

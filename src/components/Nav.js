@@ -10,22 +10,10 @@ class Nav extends Component {
     /**
     * Semplificazioni codice
     **/
-    const selectLang = this.props.selectLang;
     const currentLang = languages[this.props.id];
     const { aboutBtn } = currentLang;
     const currentAria = ARIA[this.props.id];
     const { homeLabel, infoLabel, selectLabel } = currentAria;
-
-    /**
-    * Processo usato per ciclizzare la creazione delle lingue
-    *   nel tasto Languages.
-    * Creo un "array" ed un "el" vuoti
-    * Li passo alla funzione fillLanguages(dettagli scritti lì).
-    * Ora ho un array che produrrà tanti elementi quante lingue presenti.
-    **/
-    const langList = [];
-    let langElem = '';
-    this.props.fillLanguages(langList, langElem);
 
     return (
       <header>
@@ -42,9 +30,7 @@ class Nav extends Component {
             <button aria-hidden="true" tabIndex="-1" className="button infoButton"><i className="fas fa-info-circle"></i> { aboutBtn }</button>
           </Link>
 
-          <select aria-label={ selectLabel } className="list" onChange={ selectLang }>
-            { langList }
-          </select>
+          <button aria-label={ selectLabel } className="button btn-right" onClick={ () => {this.props.modalDisplay(1)} }><i className="fas fa-globe"></i> { languages[this.props.id].lang } <i className="fas fa-chevron-down"></i></button>
 
         </nav>
 

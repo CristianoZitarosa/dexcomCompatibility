@@ -76,7 +76,7 @@ class Overlay extends Component {
   }
 
 /**
-* Trappola focus nell'overlay. Quando overlay è invisible si sblocca da solo.
+* Intrappola focus nell'overlay. Quando overlay è invisible si sblocca da solo.
 **/
   trap = () => {
     document.getElementById('landingMessage').addEventListener('keydown', trapTabKey);
@@ -159,7 +159,6 @@ class Overlay extends Component {
     **/
     const actionInfo = this.actionInfo;
     const actionAgree = this.actionAgree;
-    const selectLang = this.props.selectLang;
     const currentLang = languages[this.props.id];
     const { flag, getInfo, agree, txtFrstLn, txtScdLn } = currentLang;
     const currentAria = ARIA[this.props.id];
@@ -173,9 +172,7 @@ class Overlay extends Component {
           <div className="langSwitch"> {/* Select lingua e bandiara */}
 
             {/* Selezione della lingua */}
-            <select aria-label={ selectLabel } id='select' onChange={ selectLang }> {/* menu selezione lingue */}
-              { options }
-            </select>
+            <button aria-label={ selectLabel } className="langButton" onClick={ () => {this.props.modalDisplay(0)} }><i className="fas fa-globe"></i> { languages[this.props.id].lang } <i className="fas fa-chevron-down"></i></button>
 
             {/* Bandiera */}
             <img id='flag' aria-hidden="true" width="35" height="35" src={ flag } alt="flag"/> {/* bandiera */}

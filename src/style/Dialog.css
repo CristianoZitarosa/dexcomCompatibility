@@ -1,0 +1,59 @@
+.modal {
+  background: #2f2f2f;
+  box-shadow: 8px 8px 6px 0px #807e7e;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  height: 260px;
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -150px;
+  position: fixed;
+  top: 50%;
+}
+
+.modal h2 {
+  color: #fff;
+  margin-left: 1em;
+  margin-bottom: 2em;
+  width: 400px;
+}
+
+.closeModal {
+  border: none;
+  border-radius: 2px;
+  bottom: -10%;
+  cursor: pointer;
+  font-size: 1.3em;
+  left: 65%;
+  padding: 13px 24px;
+  position: relative;
+  width: 7em;
+}
+
+.emptyDialog {
+  background: rgb(161,160,160);
+  background: radial-gradient(circle, rgba(161,160,160,1) 38%, rgba(119,119,119,1) 78%);
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.show {
+  display: block;
+}
+
+.list {
+  background: #2f2f2f;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 1px;
+  cursor: pointer;
+  font-size: 1.3em;
+  padding: 15px;
+  margin: 0em auto;
+  width: 11em;
+}
