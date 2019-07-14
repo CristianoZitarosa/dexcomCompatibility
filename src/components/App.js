@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+ import React, { Component }  from 'react';
 import { Route, Switch } from 'react-router-dom';
 import '../style/App.css';
 import Overlay from './Overlay.js';
@@ -115,11 +115,11 @@ class App extends Component {
 * - 1 se richiesto dal Nav
 * Blocca lo scroll sul <body>
 **/
-  modalDisplay = (e) => {
+  modalDisplay = (code, target) => {
     document.querySelector('.emptyDialog').classList.add('show');
     document.querySelector('.list').focus();
-    this.setState({ dialog: e});
-    this.trap();
+    this.setState({ dialog: code});
+    this.trap(target);
     document.body.classList.remove('scroll');
   }
 
@@ -142,11 +142,13 @@ class App extends Component {
 
 /**
 * Intrappola focus nel dialog. Quando dialog è invisible si sblocca da solo.
+* E' chiamata dal Overlay e dal Nav, il target è l'ID del contenitore degli
+*   elementi focusableElements
 **/
-  trap = () => {
-    document.getElementById('modal').addEventListener('keydown', trapTabKey);
+  trap = (target) => {
+    document.getElementById(target).addEventListener('keydown', trapTabKey);
     let focusableElementsString = 'select, button';
-    let focusableElements = document.getElementById('modal').querySelectorAll(focusableElementsString);
+    let focusableElements = document.getElementById(target).querySelectorAll(focusableElementsString);
     focusableElements = Array.prototype.slice.call(focusableElements);
     let firstTabStop = focusableElements[0];
     let lastTabStop = focusableElements[focusableElements.length - 1];
@@ -186,7 +188,7 @@ class App extends Component {
             <Dialog id={ this.state.id } selectLang={ this.selectLang } fillLanguages={ this.fillLanguages } modalHide={ this.modalHide }/>
 
             {/* Componente Overlay */}
-            <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }  fillLanguages={ this.fillLanguages } existsElem={ this.existsElem } modalDisplay={ this.modalDisplay }/>
+            <Overlay id={ this.state.id } setLang={ this.setLang } selectLang={ this.selectLang }  fillLanguages={ this.fillLanguages } existsElem={ this.existsElem } modalDisplay={ this.modalDisplay } trap={ this.trap }/>
 
             {/* Componente Nav ovvero i bottoni */}
             <Nav id={ this.state.id } modalDisplay={ this.modalDisplay } />

@@ -22,7 +22,7 @@ class Overlay extends Component {
 **/
   checkOverlayClass = () => {
     if (!document.querySelector('.emptyOverlay').classList.contains('hide'))
-      this.trap();
+      this.props.trap('landingMessage');
   }
 
 /**
@@ -73,37 +73,6 @@ class Overlay extends Component {
   setValues = () => {
     this.closeOverlay();
     this.setStorage();
-  }
-
-/**
-* Intrappola focus nell'overlay. Quando overlay è invisible si sblocca da solo.
-**/
-  trap = () => {
-    document.getElementById('landingMessage').addEventListener('keydown', trapTabKey);
-    let focusableElementsString = 'select, button';
-    let focusableElements = document.getElementById('landingMessage').querySelectorAll(focusableElementsString);
-    focusableElements = Array.prototype.slice.call(focusableElements);
-    let firstTabStop = focusableElements[0];
-    let lastTabStop = focusableElements[focusableElements.length - 1];
-    firstTabStop.focus();
-    function trapTabKey(e) {
-      // Check for TAB key press
-      if (e.keyCode === 9) {
-        // SHIFT + TAB
-        if (e.shiftKey) {
-          if (document.activeElement === firstTabStop) {
-            e.preventDefault();
-            lastTabStop.focus();
-          }
-        // TAB
-        } else {
-          if (document.activeElement === lastTabStop) {
-            e.preventDefault();
-            firstTabStop.focus();
-          }
-        }
-      }
-    }
   }
 
 /**
@@ -172,7 +141,7 @@ class Overlay extends Component {
           <div className="langSwitch"> {/* Select lingua e bandiara */}
 
             {/* Selezione della lingua */}
-            <button aria-label={ selectLabel } className="langButton" onClick={ () => {this.props.modalDisplay(0)} }><i className="fas fa-globe"></i> { languages[this.props.id].lang } <i className="fas fa-chevron-down"></i></button>
+            <button aria-label={ selectLabel } className="langButton" onClick={ () => {this.props.modalDisplay(0, 'modal')} }><i className="fas fa-globe"></i> { languages[this.props.id].lang } <i className="fas fa-chevron-down"></i></button>
 
             {/* Bandiera */}
             <img id='flag' aria-hidden="true" width="35" height="35" src={ flag } alt="flag"/> {/* bandiera */}

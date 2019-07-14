@@ -30,7 +30,7 @@ class Nav extends Component {
             <button aria-hidden="true" tabIndex="-1" className="button infoButton"><i className="fas fa-info-circle"></i> { aboutBtn }</button>
           </Link>
 
-          <button aria-label={ selectLabel } className="button btn-right" onClick={ () => {this.props.modalDisplay(1)} }><i className="fas fa-globe"></i> { languages[this.props.id].lang } <i className="fas fa-chevron-down"></i></button>
+          <button aria-label={ selectLabel } className="button btn-right" onClick={ () => {this.props.modalDisplay(1, 'modal')} }><i className="fas fa-globe"></i> { languages[this.props.id].lang } <i className="fas fa-chevron-down"></i></button>
 
         </nav>
 
