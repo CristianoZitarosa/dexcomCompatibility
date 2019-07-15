@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
+*:focus {
+  position: relative;
+  outline: 3px dashed #f00;
+  outline-offset: 2px;
+}
+
 body {
   background: #eeedeb;
   font-family: 'Source Sans Pro', sans-serif;
