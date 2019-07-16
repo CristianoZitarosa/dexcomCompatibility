@@ -54,10 +54,11 @@ class Clarity extends Component {
               </h3>
               <section>
                 <h4>
-                  <i className="fas fa-mobile-alt"></i> { devices }
+                  <i className="fas fa-mobile-alt"></i>
                 </h4>
                 <ul>
                   <li className="insideText">
+                    <h5>{ devices }</h5>
                     <p>{ compatibilityAndroidMessage }</p>
                   </li>
                 </ul>
@@ -70,10 +71,11 @@ class Clarity extends Component {
               </h3>
               <section>
                 <h4>
-                  <i className="fas fa-mobile-alt"></i> { devices }
+                  <i className="fas fa-mobile-alt"></i>
                 </h4>
                 <ul>
                   <li className="insideText">
+                    <h5>{ devices }</h5>
                     <p>iPhone, iPad, and iPad touch</p>
                     <p>{ compatibilityIOSMessage }</p>
                   </li>
