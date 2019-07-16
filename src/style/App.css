@@ -14,6 +14,11 @@ body {
   overflow-y: hidden;
 }
 
+h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
 .scroll {
   overflow-y: scroll;
 }

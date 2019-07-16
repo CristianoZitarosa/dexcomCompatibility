@@ -195,10 +195,10 @@ class App extends Component {
 
             <main aria-live="assertive">
             {/* barra dei messaggi */}
-            <p id="barMessage">
+            <h1 id="barMessage">
               <span className="homeMessage">{ select }</span>
               <span className="aboutMessage hide">{ aboutBar }</span>
-            </p>
+            </h1>
 
             {/* Switch secondario, restituisce sempre Choice a meno che non sia linkato About, lo uso per far sparire Choice senza usare funzioni */}
             <Switch>
