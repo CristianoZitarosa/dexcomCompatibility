@@ -4,6 +4,10 @@
   width: 890px;
 }
 
+#hamburgerContainer {
+  display: none;
+}
+
 .button {
   background: #4c4a49;
   border: none;
@@ -37,11 +41,27 @@
 
 @media screen and (max-width: 411px) {
 
+  #hamburgerContainer {
+    display: block;
+    font-size: 1.5em;
+    height: 50px;
+    text-align: center;
+    width: 50px;
+  }
+
+  #menu {
+    color: #4c4a49;
+    margin-top: 12px;
+  }
+
   .nav-group {
-    display: flex;
+    display: none;
     flex-direction: column;
-    padding-top: 10px;
     width: 280px;
+  }
+
+  .displayFlex {
+    display: flex;
   }
 
   .button {

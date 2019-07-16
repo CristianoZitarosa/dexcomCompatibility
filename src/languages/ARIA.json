@@ -2,30 +2,36 @@
   {
     "lang": "English",
 
-    "devices": "Devices",
-    "watches": "Watches",
+    "infOverlayLabel": "info about this website",
+    "agreeOverlayLabel": "accept and continue",
+    "closeModalARIA": "Close and go back to the website",
+
     "selectLabel": "Select a language",
     "homeLabel": "homepage",
     "infoLabel": "about this website",
-    "infOverlayLabel": "info about this website",
-    "agreeOverlayLabel": "accept and continue",
+    "hamburgerLabel": "expand or collaps the navigation menu",
+
     "availableCountries": "Availability by country",
-    "korAndroidIndication": "South Korea - Android ONLY",
-    "closeModalARIA": "Close and go back to the website"
+    "devices": "Devices",
+    "watches": "Watches",
+    "korAndroidIndication": "South Korea - Android ONLY"
   },
 
   {
     "lang": "Italiano",
 
-    "devices": "Dispositivi",
-    "watches": "Orologi",
+    "infOverlayLabel": "informazioni su questo sito",
+    "agreeOverlayLabel": "accetta e continua",
+    "closeModalARIA": "Chiudi e torna al sito",
+
     "selectLabel": "Seleziona una lingua",
     "homeLabel": "pagina iniziale",
     "infoLabel": "informazioni su questo sito",
-    "infOverlayLabel": "informazioni su questo sito",
-    "agreeOverlayLabel": "accetta e continua",
+    "hamburgerLabel": "espandi o chiudi menu navigazione",
+
     "availableCountries": "Disponibile in questi paesi",
-    "korAndroidIndication": "Corea del Sud - solo Android",
-    "closeModalARIA": "Chiudi e torna al sito"
+    "devices": "Dispositivi",
+    "watches": "Orologi",
+    "korAndroidIndication": "Corea del Sud - solo Android"
   }
 ]

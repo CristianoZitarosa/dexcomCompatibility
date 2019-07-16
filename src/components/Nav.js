@@ -5,6 +5,27 @@ import languages from '../languages/languages.json';
 import ARIA from '../languages/ARIA.json';
 
 class Nav extends Component {
+/**
+* Correlato alla visibilità del menu.
+* Uso lo stato per switchare il focus nella seconda parte della
+*   funzione openMenu.
+**/
+  state = { menuVisible: false }
+
+/**
+* Mostra nasconde il Nav.
+* A seconda dello stato setta il focus su home o sul tastino menu.
+**/
+  openMenu = () => {
+    document.querySelector('.nav-group').classList.toggle('displayFlex');
+    if (this.state.menuVisible === true) {
+      document.getElementById('menu').focus();
+      this.setState({ menuVisible: false });
+    } else if (this.state.menuVisible === false) {
+      document.getElementById('home').focus();
+      this.setState({ menuVisible: true });
+    }
+  }
 
   render() {
     /**
@@ -13,10 +34,14 @@ class Nav extends Component {
     const currentLang = languages[this.props.id];
     const { aboutBtn } = currentLang;
     const currentAria = ARIA[this.props.id];
-    const { homeLabel, infoLabel, selectLabel } = currentAria;
+    const { homeLabel, infoLabel, selectLabel, hamburgerLabel } = currentAria;
 
     return (
       <header>
+
+        <div id="hamburgerContainer" role="button" tabIndex="0" aria-label={ hamburgerLabel } onClick={ this.openMenu }>
+          <i tabIndex="-1" className="fas fa-bars" id="menu" ></i>
+        </div>
 
         <nav className="nav-group">
 
