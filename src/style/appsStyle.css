@@ -90,6 +90,16 @@ article p {
 
 @media screen and (max-width: 411px) {
 
+  .countries {
+    padding: 0px 6% 0 9%;
+  }
+
+  li p {
+    width: 262px;
+    position: relative;
+    left: -75px;
+  }
+
   .left {
     border-right: 1px solid #eeedeb;
   }
@@ -98,6 +108,7 @@ article p {
     border: 3px solid #f79646;
     border-radius: 0 0 7px 7px;
     margin: 1px;
+    width: 295px;
   }
 
   .koreaRight {
@@ -117,7 +128,8 @@ article p {
   }
 
   aside p {
-    margin: 20px 29px 20px 32px;
+    /* margin: 20px 29px 20px 32px; */
+    margin: 20px 13px 20px 24px
   }
 
 }
