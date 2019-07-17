@@ -4,8 +4,10 @@
 }
 
 #nomatchBtn {
+  background: #00608e;
   border: none;
   border-radius: 5px;
+  color: white;
   cursor: pointer;
   padding: 15px 32px;
   transition:all 0.5s ease-out;
