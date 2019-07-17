@@ -40,7 +40,7 @@
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
-  font-size: 1.05em;
+  font-size: 1em;
   padding: 15px 32px;
   transition:all 0.3s ease-out;
 }
@@ -51,7 +51,7 @@
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
-  font-size: 1.05em;
+  font-size: 1em;
   padding: 12px 20px;
 }
 
