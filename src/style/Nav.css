@@ -84,6 +84,18 @@
 
 }
 
+@media screen and (min-width: 359px) and (max-width: 764px) {
+
+  .nav-group {
+    width: 320px;
+  }
+
+  .button {
+    width: 319px;
+  }
+
+}
+
 @media screen and (min-width: 765px) and (max-width: 800px) {
 
   .nav-group {

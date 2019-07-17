@@ -134,6 +134,22 @@ article p {
 
 }
 
+@media screen and (min-width: 359px) and (max-width: 764px) {
+
+  .container {
+    width: 342px;
+  }
+
+  .right {
+    width: 335px;
+  }
+
+  li p {
+   width: 300px;
+ }
+
+}
+
 @media screen and (min-width: 765px) and (max-width: 801px) {
 
   .container {

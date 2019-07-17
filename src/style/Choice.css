@@ -64,6 +64,18 @@
 
 }
 
+@media screen and (min-width: 359px) and (max-width: 764px) {
+
+  .selectionContainer {
+    width: 340px;
+  }
+
+  .appSelection {
+    width: 145px;
+  }
+
+}
+
 @media screen and (min-width: 765px) and (max-width: 801px) {
 
   .appSelection {

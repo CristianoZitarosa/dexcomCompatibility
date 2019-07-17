@@ -62,6 +62,14 @@ img:not(#flag):not(#emoji) {
 
 }
 
+@media screen and (min-width: 359px) and (max-width: 764px) {
+
+  #barMessage {
+    width: 300px;
+  }
+
+}
+
 @media screen and (min-width: 765px) and (max-width: 801px) {
 
   #barMessage {
