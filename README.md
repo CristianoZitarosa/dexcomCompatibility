@@ -12,15 +12,19 @@ So I decided to create this modification of the original page, with the only pur
 #### Preview
 Scan the QR code to visit the website:
 
+![QR code](https://raw.githubusercontent.com/CristianoZitarosa/dexcomCompatibility/master/public/images/preview/qrcode.png)
+
 Desktop version:
 
+![desktop version](https://raw.githubusercontent.com/CristianoZitarosa/dexcomCompatibility/master/public/images/preview/desktop.png)
 
 Mobile version:
+
+![mobile version](https://raw.githubusercontent.com/CristianoZitarosa/dexcomCompatibility/master/public/images/preview/mobile.png)
 
 #### Collaboration
 
 Collaboration is welcome.
-
 
 #### Techniques used
 
