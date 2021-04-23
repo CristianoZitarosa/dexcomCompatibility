@@ -1,5 +1,11 @@
 # Dexcom App compatibility
 
+## >> Project's developement status <<
+
+Since Dexcom finally improved the web page to check the compatibility, consider the developement of this project as terminated. This repository is just an archive of the project.
+
+##
+
 The Dexcom company provides a web page where users of their products can check devices compatibility with Dexcom Apps.
 As a direct user, at my eyes it looks that the provided web page could be difficult to consult because:
 - all the Apps are displayed in the same long page;
@@ -9,10 +15,6 @@ As a direct user, at my eyes it looks that the provided web page could be diffic
 Due the motivations listed above, I see it is difficult for an user to spot if a specific model is compatible or not, and at the same time it is difficult to spot if a new model has been added to the list.
 So I decided to create this modification of the original page, with the only purpose to help other users having a better consultation of compatible models.
 
-#### Preview
-Scan the QR code to visit the website:
-
-![QR code](https://raw.githubusercontent.com/CristianoZitarosa/dexcomCompatibility/master/public/images/preview/qrcode.png)
 
 Desktop version:
 
